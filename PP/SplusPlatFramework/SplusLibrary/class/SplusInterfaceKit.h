@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <PPAppPlatformKit/PPAppPlatformKit.h>
 #import "SplusCallback.h"
+#import "MBProgressHUD.h"
 
 
 //<TBBuyGoodsProtocol,TBCheckOrderDelegate>
@@ -22,6 +23,8 @@
 @property(nonatomic, strong)NSString *loginPageCode;
 
 @property(nonatomic, strong)NSString *payPageCode;
+
+@property(nonatomic, strong)MBProgressHUD *HUD;
 
 /**
  *  API单例

@@ -63,7 +63,7 @@
 		E2467E161980DEB90099E181 /* SplusCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467E151980DEB90099E181 /* SplusCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A9289219D5004F00E780CF /* SvUDIDTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A9289019D5004F00E780CF /* SvUDIDTools.h */; };
 		E2A9289319D5004F00E780CF /* SvUDIDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A9289119D5004F00E780CF /* SvUDIDTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E2BDDAA619932C010058204F /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BDDAA419932C010058204F /* MBProgressHUD.h */; };
+		E2BDDAA619932C010058204F /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BDDAA419932C010058204F /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -348,6 +348,7 @@
 			files = (
 				E2467DEA1980DD5F0099E181 /* SBJsonParser.h in Headers */,
 				E2467DD91980DD5F0099E181 /* SplusUser.h in Headers */,
+				E2BDDAA619932C010058204F /* MBProgressHUD.h in Headers */,
 				E2467E161980DEB90099E181 /* SplusCallback.h in Headers */,
 				E2A9289219D5004F00E780CF /* SvUDIDTools.h in Headers */,
 				E2467DD51980DD5F0099E181 /* AppInfo.h in Headers */,
@@ -361,7 +362,6 @@
 				E2467DEE1980DD5F0099E181 /* SBJsonWriter.h in Headers */,
 				E2467DEC1980DD5F0099E181 /* SBJsonStreamWriter.h in Headers */,
 				E2467D7E1980D8CC0099E181 /* SplusInterfaceKit.h in Headers */,
-				E2BDDAA619932C010058204F /* MBProgressHUD.h in Headers */,
 				E2467DD71980DD5F0099E181 /* OrderInfo.h in Headers */,
 				E2467E031980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h in Headers */,
 				E2467DD41980DD5F0099E181 /* HttpUrl.h in Headers */,

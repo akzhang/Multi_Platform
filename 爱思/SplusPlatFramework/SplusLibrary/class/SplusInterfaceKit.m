@@ -52,6 +52,7 @@ __strong static SplusInterfaceKit *singleton = nil;
 -(void)setDelegate:(id<SplusCallback>)argDelegate
 {
     _delegate = argDelegate;
+    [[AsPlatformSDK sharedInstance] setDelegate:self];
 }
 
 /**
@@ -109,8 +110,7 @@ __strong static SplusInterfaceKit *singleton = nil;
  */
 -(void)splusLogin
 {
-    [[PPAppPlatformKit sharedInstance] setDelegate:self];
-    [[PPAppPlatformKit sharedInstance] showLogin];
+    [[AsPlatformSDK sharedInstance] showLogin];
 }
 
 /**
@@ -118,7 +118,7 @@ __strong static SplusInterfaceKit *singleton = nil;
  */
 -(void)splusAcountManage
 {
-    [[PPAppPlatformKit sharedInstance] showCenter];
+    [[AsPlatformSDK sharedInstance] showCenter];
 }
 
 /**
@@ -160,10 +160,110 @@ __strong static SplusInterfaceKit *singleton = nil;
 #pragma mark    ---------------SDK CALLBACK---------------
 ////字符串登录成功回调【实现其中一个就可以】
 
-- (void)ppLoginStrCallBack:(NSString *)paramStrToKenKey
+//-SDK 1.4.1 - 新增的关闭用户中心回调
+- (void)asClosedCenterViewCallBack
 {
-    NSLog(@"PP助手");
-    NSLog(@"paramStrToKenkey =%@", paramStrToKenKey);
+    // 点击按钮关闭用户中心的回调
+    NSLog(@"点击按钮关闭用户中心的回调");
+    [_delegate SplusLeavedAcount];
+    
+}
+
+- (void)asPayResultCallBack:(AsPayResultCode)paramPayResultCode
+{
+    if (paramPayResultCode == 1) {
+        _payPageCode = @"1";
+    }else if (paramPayResultCode == 2){
+        _payPageCode = @"2";
+    }else if (paramPayResultCode == 3){
+        _payPageCode = @"3";
+    }
+    
+    [_delegate SplusPayOnResult:_payPageCode];//支付结果回调
+}
+
+- (void)asLogOffCallBack
+{
+    NSLog(@"注销回掉");
+    static BOOL isPad;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken,^{
+        isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+    });
+    float delay = isPad ? 1.2 : 0.6;
+    [[AsPlatformSDK sharedInstance] performSelector:@selector(showLogin) withObject:nil afterDelay:delay];
+    [_delegate SplusLogOutOnSuccess];
+    
+    //    NSURLErrorNetworkConnectionLost
+}
+
+- (void)asClosePageViewCallBack:(AsPageCode)paramPPPageCode
+{
+    if (paramPPPageCode == 1) {
+        _payPageCode = @"1";
+    }else if (paramPPPageCode == 2){
+        _payPageCode = @"2";
+    }
+    
+    [_delegate SplusLeavedWebManage:_payPageCode];//关闭登录、注册界面
+}
+
+
+- (void)asCloseWebViewCallBack:(AsWebViewCode)paramWebViewCode
+{
+    if (paramWebViewCode == 1) {
+        _payPageCode = @"1";
+    }else if (paramWebViewCode == 2){
+        _payPageCode = @"2";
+    }
+    
+    [_delegate SplusLeavedWebPay:_payPageCode];//关闭支付界面
+}
+
+- (void)asVerifyingUpdatePassCallBack
+{
+    [[AsPlatformSDK sharedInstance] showLogin];
+}
+
+- (void)asLoginCallBack:(NSString *)paramToken
+{
+    NSLog(@"登陆回调 - %@",paramToken);
+    NSLog(@"爱思助手");
+    NSLog(@"paramStrToKenkey =%@", paramToken);
+    //此URL为测试demo。请自行更改地址
+    NSString *requestURLStr = [NSString stringWithFormat:@"https://pay.i4.cn/member_game.action?token=%@",paramToken];
+    NSURL *requestUrl = [[NSURL alloc] initWithString:[requestURLStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
+
+    [request setHTTPMethod:@"POST"];
+    [request setTimeoutInterval:10];
+    
+    NSHTTPURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:nil];
+    int status = [[resultDic objectForKey:@"status"] intValue];
+    
+    //为0为正常
+    if (status == 0)
+    {
+        [self loginSplusCallback:paramToken];//请求灿和
+    }
+}
+
+/**
+ *  请求Splus登录
+ *
+ *  @param userInfo 用户信息
+ */
+-(void)loginSplusCallback:(NSString*)paramToken
+{
+    
+    _HUD = [[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].delegate.window.rootViewController.view];
+    [[UIApplication sharedApplication].delegate.window.rootViewController.view addSubview:_HUD];
+    _HUD.color = [UIColor clearColor];
+    [_HUD show: YES];
     
     // 登录请求
     NSDictionary *dictionaryBundle = [[NSBundle mainBundle] infoDictionary];
@@ -185,10 +285,10 @@ __strong static SplusInterfaceKit *singleton = nil;
                                 sourceID,@"referer",
                                 partner, @"partner",
                                 @"", @"partner_sessionid",
-                                @"", @"partner_uid",
-                                paramStrToKenKey, @"partner_token",
+                                [[AsPlatformSDK sharedInstance] currentUserId], @"partner_uid",
+                                paramToken, @"partner_token",
                                 @"", @"partner_nickname",
-                                @"", @"partner_username",
+                                [[AsPlatformSDK sharedInstance] currentUserName], @"partner_username",
                                 sourceID, @"partner_appid",
                                 mTime, @"time",
                                 @"1",@"debug",
@@ -206,80 +306,46 @@ __strong static SplusInterfaceKit *singleton = nil;
     NSLog(@"get Login url  = %@", var);
     
     [_request post:MLOGIN_URL argData:postData];
+    
 }
 
 -(void)logion_callback:(NSString*)result
 {
     
+    if (_HUD != NULL) {
+        [_HUD hide:YES];
+    }
+    
     NSLog(@"login info result = %@", result);//登录信息
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     NSDictionary *rootDic = [parser objectWithString:result];
     NSString *code = [rootDic objectForKey:@"code"];
-    
     if ([code intValue] == 1) {
         NSDictionary *data = [rootDic objectForKey:@"data"];
         NSString *sessionID = [data objectForKey:@"sessionID"];
-        NSString *uid = [data objectForKey:@"uid"];
-        [SplusUser sharedSingleton].uid = uid;
+        NSString *userID = [data objectForKey:@"uid"];
+        [SplusUser sharedSingleton].uid = userID;
         [SplusUser sharedSingleton].sessionID = sessionID;
         //登录成功，callback
         [_delegate SplusLoginOnSuccess:[SplusUser sharedSingleton]];
     }
-    
-    //    NSString *sessionid = [data objectForKey:@"sessionid"];
-    //    [[SplusUser sharedSingleton] initWithType:_passport Pwd:_splusLoginPwd.text Sessiond:sessionid Uid:uid];
+    else
+    {
+        NSString *msg = [rootDic objectForKey:@"msg"];
+        [self showMessage:msg];
+        
+        return;
+    }
 }
 
 -(void)login_error{
+    
+    if (_HUD != NULL) {
+        [_HUD hide:YES];
+    }
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络连接超时" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     [alert show];
-}
-
-
-//pay
-//关闭客户端页面回调方法
--(void)ppClosePageViewCallBack:(PPPageCode)paramPPPageCode{
-    if (paramPPPageCode == 1) {
-        _loginPageCode = @"1";
-    }else if (paramPPPageCode == 2){
-        _loginPageCode = @"2";
-    }else if (paramPPPageCode == 3){
-        _loginPageCode = @"3";
-    }
-    
-    [_delegate SplusLeavedLogin:_loginPageCode];
-}
-
-
-
-//关闭WEB页面回调方法
-- (void)ppCloseWebViewCallBack:(PPWebViewCode)paramPPWebViewCode{
-    if (paramPPWebViewCode == 1) {
-        _payPageCode = @"1";
-    }else if (paramPPWebViewCode == 2){
-        _payPageCode = @"2";
-    }else if (paramPPWebViewCode == 3){
-        _payPageCode = @"3";
-    }
-    
-    [_delegate SplusLeavedWeb:_loginPageCode];
-}
-
-//注销回调方法
-- (void)ppLogOffCallBack{
-    NSLog(@"splus 注销");
-    [_delegate SplusLogOutOnSuccess];//注销回调
-}
-
-//兑换回调接口【只有兑换会执行此回调】
-- (void)ppPayResultCallBack:(PPPayResultCode)paramPPPayResultCode{
-    //回调购买成功。其余都是失败
-    if(paramPPPayResultCode == PPPayResultCodeSucceed){
-        //购买成功发放道具
-         [_delegate SplusPayOnSuccess:[OrderInfo sharedSingleton]];
-    }else{
-        [_delegate SplusPayOnFailure];//支付失败回调
-    }
 }
 
 -(void)ppPayToSplus
@@ -377,11 +443,7 @@ __strong static SplusInterfaceKit *singleton = nil;
     if ([codeNum intValue] == 1)
     {
         NSString *orderid = [rootDic objectForKey:@"orderid"];
-        [[PPAppPlatformKit sharedInstance] exchangeGoods:[[OrderInfo sharedSingleton].money intValue]
-                                                  BillNo:orderid
-                                               BillTitle:[OrderInfo sharedSingleton].pext
-                                                  RoleId:[OrderInfo sharedSingleton].roleId
-                                                  ZoneId:0];
+        [[AsPlatformSDK sharedInstance] exchangeGoods:[[OrderInfo sharedSingleton].money intValue] BillNo:orderid BillTitle:[OrderInfo sharedSingleton].pext RoleId:[OrderInfo sharedSingleton].roleId ZoneId:[[OrderInfo sharedSingleton].serverId intValue]];
     }
 }
 

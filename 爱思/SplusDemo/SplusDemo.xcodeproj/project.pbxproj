@@ -78,14 +78,9 @@
 		E2A9D6C719E660F80044E380 /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUPPayPlugin.a; path = ../include/libUPPayPlugin.a; sourceTree = "<group>"; };
 		E2A9D6C819E660F80044E380 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../include/libWeChatSDK.a; sourceTree = "<group>"; };
 		E2A9D6D019E661320044E380 /* AsImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AsImage.bundle; path = ../include/AsImage.bundle; sourceTree = "<group>"; };
+		E2A9D6D219E663CF0044E380 /* AsInfoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsInfoKit.h; path = ../../include/AsInfoKit.h; sourceTree = "<group>"; };
+		E2A9D6D319E663CF0044E380 /* AsPlatformSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsPlatformSDK.h; path = ../../include/AsPlatformSDK.h; sourceTree = "<group>"; };
 		E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
-		E2AD7BA0199267FB0017A92B /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
-		E2AD7BA1199267FB0017A92B /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
-		E2AD7BA2199267FB0017A92B /* AlixPaylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib.a; sourceTree = "<group>"; };
-		E2AD7BB1199267FB0017A92B /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		E2AD7BB2199267FB0017A92B /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		E2AD7BB3199267FB0017A92B /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
-		E2AD7BB4199267FB0017A92B /* PPImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PPImage.bundle; sourceTree = "<group>"; };
 		E2AD7BC6199267FB0017A92B /* libMobileGestalt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMobileGestalt.dylib; path = usr/lib/libMobileGestalt.dylib; sourceTree = SDKROOT; };
 		E2AD7BC8199267FB0017A92B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E2AD7BCA199267FB0017A92B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -184,7 +179,8 @@
 		E23A98091949A2FA00790FDF /* SplusDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E2AD7B9F199267FB0017A92B /* include */,
+				E2A9D6D219E663CF0044E380 /* AsInfoKit.h */,
+				E2A9D6D319E663CF0044E380 /* AsPlatformSDK.h */,
 				E23A98121949A2FA00790FDF /* AppDelegate.h */,
 				E23A98131949A2FA00790FDF /* AppDelegate.mm */,
 				E23A98151949A2FA00790FDF /* Images.xcassets */,
@@ -222,21 +218,6 @@
 				E23A98251949A2FA00790FDF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E2AD7B9F199267FB0017A92B /* include */ = {
-			isa = PBXGroup;
-			children = (
-				E2AD7BA0199267FB0017A92B /* AlipayRsaLib.a */,
-				E2AD7BA1199267FB0017A92B /* Alixpay.bundle */,
-				E2AD7BA2199267FB0017A92B /* AlixPaylib.a */,
-				E2AD7BB1199267FB0017A92B /* libcrypto.a */,
-				E2AD7BB2199267FB0017A92B /* libssl.a */,
-				E2AD7BB3199267FB0017A92B /* libUPPayPlugin.a */,
-				E2AD7BB4199267FB0017A92B /* PPImage.bundle */,
-			);
-			name = include;
-			path = ../../include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

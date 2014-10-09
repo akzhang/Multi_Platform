@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D571B92A-8732-40A8-A380-91D5E61BF140</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FastUser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>36B288DDBD2A8E8F07FCCC7CF2995334BDE153B2</key>
+		<string>https://github.com/akzhang/Multi_Platform.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FastUser/FastUser.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>36B288DDBD2A8E8F07FCCC7CF2995334BDE153B2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/akzhang/Multi_Platform.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>36B288DDBD2A8E8F07FCCC7CF2995334BDE153B2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>36B288DDBD2A8E8F07FCCC7CF2995334BDE153B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Multi_Platform</string>
+		</dict>
+	</array>
+</dict>
+</plist>

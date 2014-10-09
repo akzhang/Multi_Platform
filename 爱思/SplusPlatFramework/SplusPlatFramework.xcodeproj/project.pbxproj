@@ -63,6 +63,8 @@
 		E2467E161980DEB90099E181 /* SplusCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467E151980DEB90099E181 /* SplusCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A9289219D5004F00E780CF /* SvUDIDTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A9289019D5004F00E780CF /* SvUDIDTools.h */; };
 		E2A9289319D5004F00E780CF /* SvUDIDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A9289119D5004F00E780CF /* SvUDIDTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2A9D6D619E665BC0044E380 /* AsInfoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A9D6D419E665BC0044E380 /* AsInfoKit.h */; };
+		E2A9D6D719E665BC0044E380 /* AsPlatformSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A9D6D519E665BC0044E380 /* AsPlatformSDK.h */; };
 		E2BDDAA619932C010058204F /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BDDAA419932C010058204F /* MBProgressHUD.h */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		E2467E151980DEB90099E181 /* SplusCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplusCallback.h; sourceTree = "<group>"; };
 		E2A9289019D5004F00E780CF /* SvUDIDTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvUDIDTools.h; sourceTree = "<group>"; };
 		E2A9289119D5004F00E780CF /* SvUDIDTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvUDIDTools.m; sourceTree = "<group>"; };
+		E2A9D6D419E665BC0044E380 /* AsInfoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsInfoKit.h; path = ../../../../include/AsInfoKit.h; sourceTree = "<group>"; };
+		E2A9D6D519E665BC0044E380 /* AsPlatformSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsPlatformSDK.h; path = ../../../../include/AsPlatformSDK.h; sourceTree = "<group>"; };
 		E2BDDAA419932C010058204F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		E2BDDAA519932C010058204F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -315,6 +319,8 @@
 		E2467DCD1980DD5F0099E181 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				E2A9D6D419E665BC0044E380 /* AsInfoKit.h */,
+				E2A9D6D519E665BC0044E380 /* AsPlatformSDK.h */,
 				E2467DCE1980DD5F0099E181 /* UserData.h */,
 				E2467DCF1980DD5F0099E181 /* UserData.m */,
 			);
@@ -346,6 +352,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A9D6D719E665BC0044E380 /* AsPlatformSDK.h in Headers */,
 				E2467DEA1980DD5F0099E181 /* SBJsonParser.h in Headers */,
 				E2467DD91980DD5F0099E181 /* SplusUser.h in Headers */,
 				E2467E161980DEB90099E181 /* SplusCallback.h in Headers */,
@@ -372,6 +379,7 @@
 				E2467DE81980DD5F0099E181 /* SBJsonBase.h in Headers */,
 				E2467E111980DD5F0099E181 /* SplusImage.h in Headers */,
 				E2467E051980DD5F0099E181 /* NSString+dataFromHexString.h in Headers */,
+				E2A9D6D619E665BC0044E380 /* AsInfoKit.h in Headers */,
 				E2467DD01980DD5F0099E181 /* Activate.h in Headers */,
 				E2467E0F1980DD5F0099E181 /* NSDictionary+QueryBuilder.h in Headers */,
 				E2467E0B1980DD5F0099E181 /* GetImage.h in Headers */,

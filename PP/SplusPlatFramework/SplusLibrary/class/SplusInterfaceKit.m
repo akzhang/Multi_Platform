@@ -165,6 +165,10 @@ __strong static SplusInterfaceKit *singleton = nil;
     NSLog(@"PP助手");
     NSLog(@"paramStrToKenkey =%@", paramStrToKenKey);
     
+    _HUD = [[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].delegate.window.rootViewController.view];
+    [[UIApplication sharedApplication].delegate.window.rootViewController.view addSubview:_HUD];
+    [_HUD show: YES];
+    
     // 登录请求
     NSDictionary *dictionaryBundle = [[NSBundle mainBundle] infoDictionary];
     NSString *partner = [dictionaryBundle objectForKey:@"Partner"];
@@ -211,26 +215,38 @@ __strong static SplusInterfaceKit *singleton = nil;
 -(void)logion_callback:(NSString*)result
 {
     
+    if (_HUD != NULL) {
+        [_HUD hide:YES];
+    }
+    
     NSLog(@"login info result = %@", result);//登录信息
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     NSDictionary *rootDic = [parser objectWithString:result];
     NSString *code = [rootDic objectForKey:@"code"];
-    
     if ([code intValue] == 1) {
         NSDictionary *data = [rootDic objectForKey:@"data"];
         NSString *sessionID = [data objectForKey:@"sessionID"];
-        NSString *uid = [data objectForKey:@"uid"];
-        [SplusUser sharedSingleton].uid = uid;
+        NSString *userID = [data objectForKey:@"uid"];
+        [SplusUser sharedSingleton].uid = userID;
         [SplusUser sharedSingleton].sessionID = sessionID;
         //登录成功，callback
         [_delegate SplusLoginOnSuccess:[SplusUser sharedSingleton]];
     }
-    
-    //    NSString *sessionid = [data objectForKey:@"sessionid"];
-    //    [[SplusUser sharedSingleton] initWithType:_passport Pwd:_splusLoginPwd.text Sessiond:sessionid Uid:uid];
+    else
+    {
+        NSString *msg = [rootDic objectForKey:@"msg"];
+        [self showMessage:msg];
+        
+        return;
+    }
 }
 
 -(void)login_error{
+    
+    if (_HUD != NULL) {
+        [_HUD hide:YES];
+    }
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络连接超时" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     [alert show];
 }

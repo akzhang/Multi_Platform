@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AsInfoKit.h"
+#include "AsPlatformSDK.h"
 #import <SplusIosSdk/SplusInterfaceKit.h>
 
 @implementation AppDelegate
@@ -21,32 +23,43 @@
     self.window.rootViewController = firstDemo;
     [self.window makeKeyAndVisible];
     
-    /**
-     *必须写在程序window初始化之后。详情请commad + 鼠标左键 点击查看接口注释
-     *初始化应用的AppId和AppKey。从开发者中心游戏列表获取（https://pay.25pp.com）
-     *设置是否打印日志在控制台,[发布时请务必改为NO]
-     *设置充值页面初始化金额,[必须为大于等于1的整数类型]
-     *设置游戏客户端与游戏服务端链接方式是否为长连接【如果游戏服务端能主动与游戏客户端交互。例如发放道具则为长连接。此处设置影响充值并兑换的方式】
-     *用户注销后是否自动push出登陆界面
-     *是否开放充值页面【操作在按钮被弹窗】
-     *若关闭充值响应的提示语
-     *初始化SDK界面代码
-     */
     NSDictionary *dictionary = [[NSBundle mainBundle] infoDictionary];
-    [[PPAppPlatformKit sharedInstance] setAppId:[[dictionary objectForKey:@"PartnerGameID"] intValue] AppKey:[dictionary objectForKey:@"PartnerKey"]];
-    [[PPAppPlatformKit sharedInstance] setIsNSlogData:YES];
-    [[PPAppPlatformKit sharedInstance] setRechargeAmount:10];
-    [[PPAppPlatformKit sharedInstance] setIsLongComet:YES];
-    [[PPAppPlatformKit sharedInstance] setIsLogOutPushLoginView:YES];
-    [[PPAppPlatformKit sharedInstance] setIsOpenRecharge:YES];
-    [[PPAppPlatformKit sharedInstance] setCloseRechargeAlertMessage:@"关闭充值提示语"];
+    [[AsInfoKit sharedInstance] setAppId:[[dictionary objectForKey:@"PartnerGameID"] intValue]];
+    [[AsInfoKit sharedInstance] setAppKey:[dictionary objectForKey:@"PartnerKey"]];
+    [[AsInfoKit sharedInstance] setLogData:YES];
+    [[AsInfoKit sharedInstance] setCloseRecharge:NO];
+    [[AsInfoKit sharedInstance] setCloseRechargeAlertMessage:@"充值功能暂时不开放"];
+    /* @noti  只有余额大于道具金额时候才有客户端回调。余额不足的情况取决与LongComet参数，LongComet = YES，则为充值兑换,
+     回调给服务端，LongComet = NO ，则只是打开充值界面
+     */
+    [[AsInfoKit sharedInstance] setLongComet:YES];
+    /*
+     解决游戏在iOS 5 上 无法显示爱思充值/支付页面、银联支付页面
+     若游戏有根视图控制器（RootViewController），则设置为 self.asViewController(为自己的根视图控制器名称)
+     若无根视图控制器，则设置为 nil
+     */
+    [[AsInfoKit sharedInstance] setRootViewController:firstDemo];
     
-    [[PPUIKit sharedInstance] checkGameUpdate];
-    [PPUIKit setIsDeviceOrientationLandscapeLeft:YES];
-    [PPUIKit setIsDeviceOrientationLandscapeRight:YES];
-    [PPUIKit setIsDeviceOrientationPortrait:YES];
-    [PPUIKit setIsDeviceOrientationPortraitUpsideDown:YES];
+    [[AsPlatformSDK sharedInstance] checkGameUpdate];
 
+    return YES;
+}
+
+- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    
+    if ([sourceApplication isEqualToString:@"com.alipay.iphoneclient"])
+    {
+        [[AsInfoKit sharedInstance] alixPayResult:url];
+    }
+    else if ([sourceApplication isEqualToString:@"com.alipay.safepayclient"])
+    {
+        [[AsInfoKit sharedInstance] alixPayResult:url];
+    }
+    else if ([sourceApplication isEqualToString:@"com.tencent.xin"])
+    {
+        [[AsInfoKit sharedInstance] weChatPayResult:url];
+    }
     return YES;
 }
 

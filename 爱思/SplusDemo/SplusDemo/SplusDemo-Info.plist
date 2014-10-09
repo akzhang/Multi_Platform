@@ -27,7 +27,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>SplusAlipay</string>
+				<string>As321</string>
 			</array>
 		</dict>
 	</array>
@@ -84,11 +84,11 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>PartnerGameID</key>
-	<string>4537</string>
+	<string>321</string>
 	<key>Partner</key>
-	<string>12</string>
+	<string>18</string>
 	<key>PartnerKey</key>
-	<string>3f3e4bf90ab166778b98e69492d6c24b</string>
+	<string>581b969e3a8845e8956966672ce5b19e</string>
 	<key>GameID</key>
 	<string>1000001</string>
 	<key>GameKey</key>

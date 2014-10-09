@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PPAppPlatformKit/PPAppPlatformKit.h>
+#import "AsPlatformSDK.h"
 #import "SplusCallback.h"
+#import "MBProgressHUD.h"
 
 
 //<TBBuyGoodsProtocol,TBCheckOrderDelegate>
 
-@interface SplusInterfaceKit : NSObject<PPAppPlatformKitDelegate>
+@interface SplusInterfaceKit : NSObject<AsPlatformSDKDelegate>
 
 @property(nonatomic,retain)id<SplusCallback> delegate;//设置callback委托
 
@@ -22,6 +23,9 @@
 @property(nonatomic, strong)NSString *loginPageCode;
 
 @property(nonatomic, strong)NSString *payPageCode;
+
+@property(nonatomic, strong)MBProgressHUD *HUD;
+
 
 /**
  *  API单例

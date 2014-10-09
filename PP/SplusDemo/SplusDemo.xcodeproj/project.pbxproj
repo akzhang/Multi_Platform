@@ -468,7 +468,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SplusDemo/SplusDemo-Prefix.pch";
 				INFOPLIST_FILE = "SplusDemo/SplusDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ch/Desktop/Multi_Platform/PP/include,
@@ -513,7 +513,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SplusDemo/SplusDemo-Prefix.pch";
 				INFOPLIST_FILE = "SplusDemo/SplusDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ch/Desktop/Multi_Platform/PP/include,

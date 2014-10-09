@@ -222,26 +222,64 @@
     [self showMessage:@"登录成功"];
 }
 
-//支付成功回调
--(void)SplusPayOnSuccess:(id)sender
-{
-    [self showMessage:@"支付成功回调"];
-}
-
-//支付失败回调
--(void)SplusPayOnFailure
-{
-    [self showMessage:@"支付失败回调"];
-}
-
 //注销回调
 -(void)SplusLogOutOnSuccess
 {
     [[SplusInterfaceKit sharedInstance] splusLogin];
 }
 
-//从登录页面离开
--(void)SplusLeavedLogin:(id)sender
+//支付结果回调
+-(void)SplusPayOnResult:(id)sender
+{
+    int loginPageCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
+    switch (loginPageCode) {
+        case 1:
+            /**
+             * 购买成功
+             */
+            [self showMessage:@"购买成功"];
+            break;
+            
+        case 2:
+            /**
+             * 用户离线，禁止访问
+             */
+            [self showMessage:@"用户离线，禁止访问"];
+            break;
+            
+        case 3:
+            /**
+             * 非法访问，可能用户已经下线
+             */
+            [self showMessage:@"非法访问，可能用户已经下线"];
+            break;
+            
+        case 4:
+            /**
+             * 爱思币余额不足 必选参数丢失
+             */
+            [self showMessage:@"爱思币余额不足 必选参数丢失"];
+            break;
+            
+        case 5:
+            /**
+             * 消费金额填写不正确
+             */
+            [self showMessage:@"消费金额填写不正确"];
+            break;
+            
+        default:
+            /**
+             * 用户中途取消
+             */
+            [self showMessage:@"用户中途取消"];
+            break;
+    }
+}
+
+
+//关闭登录或者注册界面
+-(void)SplusLeavedWebManage:(id)sender
 {
     int loginPageCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
     if (loginPageCode == 1) {
@@ -254,16 +292,11 @@
          * 关闭接口为登录页面
          */
         [self showMessage:@"关闭注册页面回调"];
-    }else if (loginPageCode == 3){
-        /**
-         * 关闭接口为登录页面
-         */
-        [self showMessage:@"其它页面退出回调"];
     }
 }
 
-//从web页面离开
--(void)SplusLeavedWeb:(id)sender
+//关闭充值界面
+-(void)SplusLeavedWebPay:(id)sender
 {
     int webPageCode = [sender intValue];
     if (webPageCode == 1) {
@@ -276,11 +309,6 @@
          * 关闭兑换页面
          */
         [self showMessage:@"关闭兑换页面"];
-    }else if (webPageCode == 3){
-        /**
-         * WEB其他页面关闭
-         */
-        [self showMessage:@"WEB其他页面关闭"];
     }
 }
 
