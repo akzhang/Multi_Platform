@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E23A98041949A2FA00790FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A98031949A2FA00790FDF /* Foundation.framework */; };
+		E23A98061949A2FA00790FDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A98051949A2FA00790FDF /* CoreGraphics.framework */; };
+		E23A98081949A2FA00790FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A98071949A2FA00790FDF /* UIKit.framework */; };
+		E23A980E1949A2FA00790FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E23A980C1949A2FA00790FDF /* InfoPlist.strings */; };
+		E23A98101949A2FA00790FDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A980F1949A2FA00790FDF /* main.m */; };
+		E23A98141949A2FA00790FDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A98131949A2FA00790FDF /* AppDelegate.m */; };
+		E23A98161949A2FA00790FDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23A98151949A2FA00790FDF /* Images.xcassets */; };
+		E23A981D1949A2FA00790FDF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A981C1949A2FA00790FDF /* XCTest.framework */; };
+		E23A981E1949A2FA00790FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A98031949A2FA00790FDF /* Foundation.framework */; };
+		E23A981F1949A2FA00790FDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23A98071949A2FA00790FDF /* UIKit.framework */; };
+		E23A98271949A2FA00790FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E23A98251949A2FA00790FDF /* InfoPlist.strings */; };
+		E23A98291949A2FA00790FDF /* SplusDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A98281949A2FA00790FDF /* SplusDemoTests.m */; };
+		E23C207319515ED100EC4F37 /* DemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23C207219515ED100EC4F37 /* DemoTest.m */; };
+		E2A3EC5019A6E4BD00BB9925 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC4F19A6E4BD00BB9925 /* libstdc++.6.dylib */; };
+		E2A3EC5219A6E4C600BB9925 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC5119A6E4C600BB9925 /* libz.dylib */; };
+		E2A3EC5419A6E4D900BB9925 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC5319A6E4D900BB9925 /* QuartzCore.framework */; };
+		E2A3EC5619A6E4E700BB9925 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC5519A6E4E700BB9925 /* AdSupport.framework */; };
+		E2A3EC5819A6E4F400BB9925 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC5719A6E4F400BB9925 /* SystemConfiguration.framework */; };
+		E2A3EC5A19A6E4FD00BB9925 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC5919A6E4FD00BB9925 /* CFNetwork.framework */; };
+		E2A3EC5C19A6E55C00BB9925 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC5B19A6E55C00BB9925 /* Security.framework */; };
+		E2A3EC5F19A6E5EF00BB9925 /* CppHack.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2A3EC5E19A6E5EF00BB9925 /* CppHack.mm */; };
+		E2A3EC6319A6F37F00BB9925 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EC6219A6F37F00BB9925 /* MobileCoreServices.framework */; };
+		E2AD7B4D199267FB0017A92B /* SplusLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E23A98201949A2FA00790FDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E23A97F81949A2FA00790FDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E23A97FF1949A2FA00790FDF;
+			remoteInfo = SplusDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E23A98001949A2FA00790FDF /* SplusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23A98031949A2FA00790FDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E23A98051949A2FA00790FDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E23A98071949A2FA00790FDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E23A980B1949A2FA00790FDF /* SplusDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplusDemo-Info.plist"; sourceTree = "<group>"; };
+		E23A980D1949A2FA00790FDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E23A980F1949A2FA00790FDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E23A98111949A2FA00790FDF /* SplusDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplusDemo-Prefix.pch"; sourceTree = "<group>"; };
+		E23A98121949A2FA00790FDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E23A98131949A2FA00790FDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E23A98151949A2FA00790FDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E23A981B1949A2FA00790FDF /* SplusDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplusDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23A981C1949A2FA00790FDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E23A98241949A2FA00790FDF /* SplusDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplusDemoTests-Info.plist"; sourceTree = "<group>"; };
+		E23A98261949A2FA00790FDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E23A98281949A2FA00790FDF /* SplusDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplusDemoTests.m; sourceTree = "<group>"; };
+		E23C207119515ED100EC4F37 /* DemoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTest.h; sourceTree = "<group>"; };
+		E23C207219515ED100EC4F37 /* DemoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTest.m; sourceTree = "<group>"; };
+		E2A3EC4A19A6E34B00BB9925 /* HXAppPlatformKitPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HXAppPlatformKitPro.h; path = ../../HXAppPlatformKitPro.h; sourceTree = "<group>"; };
+		E2A3EC4F19A6E4BD00BB9925 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		E2A3EC5119A6E4C600BB9925 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E2A3EC5319A6E4D900BB9925 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E2A3EC5519A6E4E700BB9925 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		E2A3EC5719A6E4F400BB9925 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E2A3EC5919A6E4FD00BB9925 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E2A3EC5B19A6E55C00BB9925 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E2A3EC5D19A6E5EF00BB9925 /* CppHack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CppHack.h; path = ../../CppHack.h; sourceTree = "<group>"; };
+		E2A3EC5E19A6E5EF00BB9925 /* CppHack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CppHack.mm; path = ../../CppHack.mm; sourceTree = "<group>"; };
+		E2A3EC6219A6F37F00BB9925 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E23A97FD1949A2FA00790FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3EC6319A6F37F00BB9925 /* MobileCoreServices.framework in Frameworks */,
+				E2A3EC5C19A6E55C00BB9925 /* Security.framework in Frameworks */,
+				E2A3EC5A19A6E4FD00BB9925 /* CFNetwork.framework in Frameworks */,
+				E2A3EC5819A6E4F400BB9925 /* SystemConfiguration.framework in Frameworks */,
+				E2A3EC5619A6E4E700BB9925 /* AdSupport.framework in Frameworks */,
+				E2A3EC5419A6E4D900BB9925 /* QuartzCore.framework in Frameworks */,
+				E2A3EC5219A6E4C600BB9925 /* libz.dylib in Frameworks */,
+				E2A3EC5019A6E4BD00BB9925 /* libstdc++.6.dylib in Frameworks */,
+				E23A98061949A2FA00790FDF /* CoreGraphics.framework in Frameworks */,
+				E23A98081949A2FA00790FDF /* UIKit.framework in Frameworks */,
+				E2AD7B4D199267FB0017A92B /* SplusLibrary.framework in Frameworks */,
+				E23A98041949A2FA00790FDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E23A98181949A2FA00790FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23A981D1949A2FA00790FDF /* XCTest.framework in Frameworks */,
+				E23A981F1949A2FA00790FDF /* UIKit.framework in Frameworks */,
+				E23A981E1949A2FA00790FDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E23A97F71949A2FA00790FDF = {
+			isa = PBXGroup;
+			children = (
+				E23A98091949A2FA00790FDF /* SplusDemo */,
+				E23A98221949A2FA00790FDF /* SplusDemoTests */,
+				E23A98021949A2FA00790FDF /* Frameworks */,
+				E23A98011949A2FA00790FDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E23A98011949A2FA00790FDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E23A98001949A2FA00790FDF /* SplusDemo.app */,
+				E23A981B1949A2FA00790FDF /* SplusDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E23A98021949A2FA00790FDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3EC6219A6F37F00BB9925 /* MobileCoreServices.framework */,
+				E2A3EC5B19A6E55C00BB9925 /* Security.framework */,
+				E2A3EC5919A6E4FD00BB9925 /* CFNetwork.framework */,
+				E2A3EC5719A6E4F400BB9925 /* SystemConfiguration.framework */,
+				E2A3EC5519A6E4E700BB9925 /* AdSupport.framework */,
+				E2A3EC5319A6E4D900BB9925 /* QuartzCore.framework */,
+				E2A3EC5119A6E4C600BB9925 /* libz.dylib */,
+				E2A3EC4F19A6E4BD00BB9925 /* libstdc++.6.dylib */,
+				E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */,
+				E23A98031949A2FA00790FDF /* Foundation.framework */,
+				E23A98051949A2FA00790FDF /* CoreGraphics.framework */,
+				E23A98071949A2FA00790FDF /* UIKit.framework */,
+				E23A981C1949A2FA00790FDF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E23A98091949A2FA00790FDF /* SplusDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E2A3EC5D19A6E5EF00BB9925 /* CppHack.h */,
+				E2A3EC5E19A6E5EF00BB9925 /* CppHack.mm */,
+				E2A3EC4A19A6E34B00BB9925 /* HXAppPlatformKitPro.h */,
+				E23A98121949A2FA00790FDF /* AppDelegate.h */,
+				E23A98131949A2FA00790FDF /* AppDelegate.m */,
+				E23A98151949A2FA00790FDF /* Images.xcassets */,
+				E23A980A1949A2FA00790FDF /* Supporting Files */,
+				E23C207119515ED100EC4F37 /* DemoTest.h */,
+				E23C207219515ED100EC4F37 /* DemoTest.m */,
+			);
+			path = SplusDemo;
+			sourceTree = "<group>";
+		};
+		E23A980A1949A2FA00790FDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E23A980B1949A2FA00790FDF /* SplusDemo-Info.plist */,
+				E23A980C1949A2FA00790FDF /* InfoPlist.strings */,
+				E23A980F1949A2FA00790FDF /* main.m */,
+				E23A98111949A2FA00790FDF /* SplusDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E23A98221949A2FA00790FDF /* SplusDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E23A98281949A2FA00790FDF /* SplusDemoTests.m */,
+				E23A98231949A2FA00790FDF /* Supporting Files */,
+			);
+			path = SplusDemoTests;
+			sourceTree = "<group>";
+		};
+		E23A98231949A2FA00790FDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E23A98241949A2FA00790FDF /* SplusDemoTests-Info.plist */,
+				E23A98251949A2FA00790FDF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E23A97FF1949A2FA00790FDF /* SplusDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E23A982C1949A2FA00790FDF /* Build configuration list for PBXNativeTarget "SplusDemo" */;
+			buildPhases = (
+				E23A97FC1949A2FA00790FDF /* Sources */,
+				E23A97FD1949A2FA00790FDF /* Frameworks */,
+				E23A97FE1949A2FA00790FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplusDemo;
+			productName = SplusDemo;
+			productReference = E23A98001949A2FA00790FDF /* SplusDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E23A981A1949A2FA00790FDF /* SplusDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E23A982F1949A2FA00790FDF /* Build configuration list for PBXNativeTarget "SplusDemoTests" */;
+			buildPhases = (
+				E23A98171949A2FA00790FDF /* Sources */,
+				E23A98181949A2FA00790FDF /* Frameworks */,
+				E23A98191949A2FA00790FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E23A98211949A2FA00790FDF /* PBXTargetDependency */,
+			);
+			name = SplusDemoTests;
+			productName = SplusDemoTests;
+			productReference = E23A981B1949A2FA00790FDF /* SplusDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E23A97F81949A2FA00790FDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = akzhang;
+				TargetAttributes = {
+					E23A97FF1949A2FA00790FDF = {
+						DevelopmentTeam = HJV7655JMJ;
+					};
+					E23A981A1949A2FA00790FDF = {
+						TestTargetID = E23A97FF1949A2FA00790FDF;
+					};
+				};
+			};
+			buildConfigurationList = E23A97FB1949A2FA00790FDF /* Build configuration list for PBXProject "SplusDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E23A97F71949A2FA00790FDF;
+			productRefGroup = E23A98011949A2FA00790FDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E23A97FF1949A2FA00790FDF /* SplusDemo */,
+				E23A981A1949A2FA00790FDF /* SplusDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E23A97FE1949A2FA00790FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23A980E1949A2FA00790FDF /* InfoPlist.strings in Resources */,
+				E23A98161949A2FA00790FDF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E23A98191949A2FA00790FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23A98271949A2FA00790FDF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E23A97FC1949A2FA00790FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A3EC5F19A6E5EF00BB9925 /* CppHack.mm in Sources */,
+				E23A98141949A2FA00790FDF /* AppDelegate.m in Sources */,
+				E23A98101949A2FA00790FDF /* main.m in Sources */,
+				E23C207319515ED100EC4F37 /* DemoTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E23A98171949A2FA00790FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23A98291949A2FA00790FDF /* SplusDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E23A98211949A2FA00790FDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E23A97FF1949A2FA00790FDF /* SplusDemo */;
+			targetProxy = E23A98201949A2FA00790FDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E23A980C1949A2FA00790FDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E23A980D1949A2FA00790FDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E23A98251949A2FA00790FDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E23A98261949A2FA00790FDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E23A982A1949A2FA00790FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E23A982B1949A2FA00790FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E23A982D1949A2FA00790FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SplusFramework-bokwgswiljkatrcswihadpyiclsr/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SplusFramework-bokwgswiljkatrcswihadpyiclsr/Build/Products/Debug-iphonesimulator",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/TBplat-abwusxkgqloyvlaogptalejriocz/Build/Products/Debug-iphoneos",
+					/Users/ch/Desktop/Multi_Platform/TBPlatform,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplusDemo/SplusDemo-Prefix.pch";
+				INFOPLIST_FILE = "SplusDemo/SplusDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ch/Desktop/Multi_Platform/itools,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-lstdc++",
+					"-all_load",
+					"-lz",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0348CB2E-2B40-45F4-B78E-4D10249B3A8F";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E23A982E1949A2FA00790FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SplusFramework-bokwgswiljkatrcswihadpyiclsr/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SplusFramework-bokwgswiljkatrcswihadpyiclsr/Build/Products/Debug-iphonesimulator",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/TBplat-abwusxkgqloyvlaogptalejriocz/Build/Products/Debug-iphoneos",
+					/Users/ch/Desktop/Multi_Platform/TBPlatform,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplusDemo/SplusDemo-Prefix.pch";
+				INFOPLIST_FILE = "SplusDemo/SplusDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ch/Desktop/Multi_Platform/itools,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-lstdc++",
+					"-all_load",
+					"-lz",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0348CB2E-2B40-45F4-B78E-4D10249B3A8F";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E23A98301949A2FA00790FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SplusDemo.app/SplusDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplusDemo/SplusDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SplusDemoTests/SplusDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E23A98311949A2FA00790FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SplusDemo.app/SplusDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplusDemo/SplusDemo-Prefix.pch";
+				INFOPLIST_FILE = "SplusDemoTests/SplusDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E23A97FB1949A2FA00790FDF /* Build configuration list for PBXProject "SplusDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E23A982A1949A2FA00790FDF /* Debug */,
+				E23A982B1949A2FA00790FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E23A982C1949A2FA00790FDF /* Build configuration list for PBXNativeTarget "SplusDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E23A982D1949A2FA00790FDF /* Debug */,
+				E23A982E1949A2FA00790FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E23A982F1949A2FA00790FDF /* Build configuration list for PBXNativeTarget "SplusDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E23A98301949A2FA00790FDF /* Debug */,
+				E23A98311949A2FA00790FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E23A97F81949A2FA00790FDF /* Project object */;
+}

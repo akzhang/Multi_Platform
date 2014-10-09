@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2467D6B1980D62A0099E181 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2467D6A1980D62A0099E181 /* CoreFoundation.framework */; };
+		E2467D711980D62A0099E181 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2467D6F1980D62A0099E181 /* InfoPlist.strings */; };
+		E2467D7E1980D8CC0099E181 /* SplusInterfaceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D7C1980D8CC0099E181 /* SplusInterfaceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2467D801980D9290099E181 /* SplusInterfaceKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D7D1980D8CC0099E181 /* SplusInterfaceKit.m */; };
+		E2467DD01980DD5F0099E181 /* Activate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D821980DD5E0099E181 /* Activate.h */; };
+		E2467DD11980DD5F0099E181 /* Activate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D831980DD5E0099E181 /* Activate.m */; };
+		E2467DD21980DD5F0099E181 /* ActivateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D841980DD5E0099E181 /* ActivateInfo.h */; };
+		E2467DD31980DD5F0099E181 /* ActivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D851980DD5E0099E181 /* ActivateInfo.m */; };
+		E2467DD41980DD5F0099E181 /* HttpUrl.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D871980DD5E0099E181 /* HttpUrl.h */; };
+		E2467DD51980DD5F0099E181 /* AppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D891980DD5E0099E181 /* AppInfo.h */; };
+		E2467DD61980DD5F0099E181 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D8A1980DD5E0099E181 /* AppInfo.m */; };
+		E2467DD71980DD5F0099E181 /* OrderInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D8B1980DD5E0099E181 /* OrderInfo.h */; };
+		E2467DD81980DD5F0099E181 /* OrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D8C1980DD5E0099E181 /* OrderInfo.m */; };
+		E2467DD91980DD5F0099E181 /* SplusUser.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D8D1980DD5E0099E181 /* SplusUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2467DDA1980DD5F0099E181 /* SplusUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D8E1980DD5E0099E181 /* SplusUser.m */; };
+		E2467DDB1980DD5F0099E181 /* checkWifi.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D901980DD5E0099E181 /* checkWifi.h */; };
+		E2467DDC1980DD5F0099E181 /* checkWifi.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D911980DD5E0099E181 /* checkWifi.m */; };
+		E2467DDD1980DD5F0099E181 /* qqMac.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D921980DD5E0099E181 /* qqMac.h */; };
+		E2467DDE1980DD5F0099E181 /* qqMac.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D931980DD5E0099E181 /* qqMac.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DDF1980DD5F0099E181 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D941980DD5E0099E181 /* Reachability.h */; };
+		E2467DE01980DD5F0099E181 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D951980DD5E0099E181 /* Reachability.m */; };
+		E2467DE11980DD5F0099E181 /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D971980DD5E0099E181 /* JSON.h */; };
+		E2467DE41980DD5F0099E181 /* NSObject+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D9A1980DD5E0099E181 /* NSObject+SBJSON.h */; };
+		E2467DE51980DD5F0099E181 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D9B1980DD5E0099E181 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DE61980DD5F0099E181 /* NSString+SBJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D9C1980DD5E0099E181 /* NSString+SBJSON.h */; };
+		E2467DE71980DD5F0099E181 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D9D1980DD5E0099E181 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DE81980DD5F0099E181 /* SBJsonBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D9E1980DD5E0099E181 /* SBJsonBase.h */; };
+		E2467DE91980DD5F0099E181 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D9F1980DD5E0099E181 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DEA1980DD5F0099E181 /* SBJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DA01980DD5E0099E181 /* SBJsonParser.h */; };
+		E2467DEB1980DD5F0099E181 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DA11980DD5E0099E181 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DEC1980DD5F0099E181 /* SBJsonStreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DA21980DD5E0099E181 /* SBJsonStreamWriter.h */; };
+		E2467DED1980DD5F0099E181 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DA31980DD5E0099E181 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DEE1980DD5F0099E181 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DA41980DD5E0099E181 /* SBJsonWriter.h */; };
+		E2467DEF1980DD5F0099E181 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DA51980DD5E0099E181 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2467DF01980DD5F0099E181 /* SBProxyForJson.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DA61980DD5E0099E181 /* SBProxyForJson.h */; };
+		E2467DF11980DD5F0099E181 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DA81980DD5E0099E181 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2467DF21980DD5F0099E181 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DA91980DD5E0099E181 /* MBProgressHUD.m */; };
+		E2467DF31980DD5F0099E181 /* MyMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DAB1980DD5E0099E181 /* MyMD5.h */; };
+		E2467DF41980DD5F0099E181 /* MyMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DAC1980DD5E0099E181 /* MyMD5.m */; };
+		E2467DFD1980DD5F0099E181 /* NSData+ASE128.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DB61980DD5E0099E181 /* NSData+ASE128.h */; };
+		E2467DFE1980DD5F0099E181 /* NSData+ASE128.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DB71980DD5E0099E181 /* NSData+ASE128.m */; };
+		E2467E031980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DBC1980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h */; };
+		E2467E041980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DBD1980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.m */; };
+		E2467E051980DD5F0099E181 /* NSString+dataFromHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DBE1980DD5F0099E181 /* NSString+dataFromHexString.h */; };
+		E2467E061980DD5F0099E181 /* NSString+dataFromHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DBF1980DD5F0099E181 /* NSString+dataFromHexString.m */; };
+		E2467E0B1980DD5F0099E181 /* GetImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DC51980DD5F0099E181 /* GetImage.h */; };
+		E2467E0C1980DD5F0099E181 /* GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DC61980DD5F0099E181 /* GetImage.m */; };
+		E2467E0D1980DD5F0099E181 /* httpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DC71980DD5F0099E181 /* httpRequest.h */; };
+		E2467E0E1980DD5F0099E181 /* httpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DC81980DD5F0099E181 /* httpRequest.m */; };
+		E2467E0F1980DD5F0099E181 /* NSDictionary+QueryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DC91980DD5F0099E181 /* NSDictionary+QueryBuilder.h */; };
+		E2467E101980DD5F0099E181 /* NSDictionary+QueryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DCA1980DD5F0099E181 /* NSDictionary+QueryBuilder.m */; };
+		E2467E111980DD5F0099E181 /* SplusImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DCB1980DD5F0099E181 /* SplusImage.h */; };
+		E2467E121980DD5F0099E181 /* SplusImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DCC1980DD5F0099E181 /* SplusImage.m */; };
+		E2467E131980DD5F0099E181 /* UserData.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467DCE1980DD5F0099E181 /* UserData.h */; };
+		E2467E141980DD5F0099E181 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467DCF1980DD5F0099E181 /* UserData.m */; };
+		E2467E161980DEB90099E181 /* SplusCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467E151980DEB90099E181 /* SplusCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2AFB93919D954CA0035086E /* SvUDIDTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E2AFB93719D954CA0035086E /* SvUDIDTools.h */; };
+		E2AFB93A19D954CA0035086E /* SvUDIDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AFB93819D954CA0035086E /* SvUDIDTools.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E2AFB93C19D95E580035086E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AFB93B19D95E580035086E /* UIKit.framework */; };
+		E2C313E719888AA900D97357 /* NdComPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C313E519888AA900D97357 /* NdComPlatform.framework */; };
+		E2C313E819888AA900D97357 /* NdComPlatformInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C313E619888AA900D97357 /* NdComPlatformInt.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2467D3F1980D5960099E181 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2467D691980D62A0099E181 /* SplusLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplusLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2467D6A1980D62A0099E181 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E2467D6E1980D62A0099E181 /* SplusLibrary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplusLibrary-Info.plist"; sourceTree = "<group>"; };
+		E2467D701980D62A0099E181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2467D721980D62A0099E181 /* SplusLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplusLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		E2467D7C1980D8CC0099E181 /* SplusInterfaceKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplusInterfaceKit.h; sourceTree = "<group>"; };
+		E2467D7D1980D8CC0099E181 /* SplusInterfaceKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplusInterfaceKit.m; sourceTree = "<group>"; };
+		E2467D821980DD5E0099E181 /* Activate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activate.h; sourceTree = "<group>"; };
+		E2467D831980DD5E0099E181 /* Activate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activate.m; sourceTree = "<group>"; };
+		E2467D841980DD5E0099E181 /* ActivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivateInfo.h; sourceTree = "<group>"; };
+		E2467D851980DD5E0099E181 /* ActivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivateInfo.m; sourceTree = "<group>"; };
+		E2467D871980DD5E0099E181 /* HttpUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUrl.h; sourceTree = "<group>"; };
+		E2467D891980DD5E0099E181 /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		E2467D8A1980DD5E0099E181 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
+		E2467D8B1980DD5E0099E181 /* OrderInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfo.h; sourceTree = "<group>"; };
+		E2467D8C1980DD5E0099E181 /* OrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfo.m; sourceTree = "<group>"; };
+		E2467D8D1980DD5E0099E181 /* SplusUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplusUser.h; sourceTree = "<group>"; };
+		E2467D8E1980DD5E0099E181 /* SplusUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplusUser.m; sourceTree = "<group>"; };
+		E2467D901980DD5E0099E181 /* checkWifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkWifi.h; sourceTree = "<group>"; };
+		E2467D911980DD5E0099E181 /* checkWifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkWifi.m; sourceTree = "<group>"; };
+		E2467D921980DD5E0099E181 /* qqMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qqMac.h; sourceTree = "<group>"; };
+		E2467D931980DD5E0099E181 /* qqMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = qqMac.m; sourceTree = "<group>"; };
+		E2467D941980DD5E0099E181 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E2467D951980DD5E0099E181 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E2467D971980DD5E0099E181 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		E2467D9A1980DD5E0099E181 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		E2467D9B1980DD5E0099E181 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		E2467D9C1980DD5E0099E181 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		E2467D9D1980DD5E0099E181 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		E2467D9E1980DD5E0099E181 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		E2467D9F1980DD5E0099E181 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		E2467DA01980DD5E0099E181 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		E2467DA11980DD5E0099E181 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		E2467DA21980DD5E0099E181 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		E2467DA31980DD5E0099E181 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		E2467DA41980DD5E0099E181 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		E2467DA51980DD5E0099E181 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E2467DA61980DD5E0099E181 /* SBProxyForJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBProxyForJson.h; sourceTree = "<group>"; };
+		E2467DA81980DD5E0099E181 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E2467DA91980DD5E0099E181 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E2467DAB1980DD5E0099E181 /* MyMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMD5.h; sourceTree = "<group>"; };
+		E2467DAC1980DD5E0099E181 /* MyMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMD5.m; sourceTree = "<group>"; };
+		E2467DB61980DD5E0099E181 /* NSData+ASE128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ASE128.h"; sourceTree = "<group>"; };
+		E2467DB71980DD5E0099E181 /* NSData+ASE128.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ASE128.m"; sourceTree = "<group>"; };
+		E2467DBC1980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+hexRepresentationWithSpaces_AS.h"; sourceTree = "<group>"; };
+		E2467DBD1980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+hexRepresentationWithSpaces_AS.m"; sourceTree = "<group>"; };
+		E2467DBE1980DD5F0099E181 /* NSString+dataFromHexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+dataFromHexString.h"; sourceTree = "<group>"; };
+		E2467DBF1980DD5F0099E181 /* NSString+dataFromHexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+dataFromHexString.m"; sourceTree = "<group>"; };
+		E2467DC51980DD5F0099E181 /* GetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImage.h; sourceTree = "<group>"; };
+		E2467DC61980DD5F0099E181 /* GetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImage.m; sourceTree = "<group>"; };
+		E2467DC71980DD5F0099E181 /* httpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpRequest.h; sourceTree = "<group>"; };
+		E2467DC81980DD5F0099E181 /* httpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpRequest.m; sourceTree = "<group>"; };
+		E2467DC91980DD5F0099E181 /* NSDictionary+QueryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryBuilder.h"; sourceTree = "<group>"; };
+		E2467DCA1980DD5F0099E181 /* NSDictionary+QueryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryBuilder.m"; sourceTree = "<group>"; };
+		E2467DCB1980DD5F0099E181 /* SplusImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplusImage.h; sourceTree = "<group>"; };
+		E2467DCC1980DD5F0099E181 /* SplusImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplusImage.m; sourceTree = "<group>"; };
+		E2467DCE1980DD5F0099E181 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		E2467DCF1980DD5F0099E181 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		E2467E151980DEB90099E181 /* SplusCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplusCallback.h; sourceTree = "<group>"; };
+		E2AFB93719D954CA0035086E /* SvUDIDTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvUDIDTools.h; sourceTree = "<group>"; };
+		E2AFB93819D954CA0035086E /* SvUDIDTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvUDIDTools.m; sourceTree = "<group>"; };
+		E2AFB93B19D95E580035086E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E2C313E519888AA900D97357 /* NdComPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NdComPlatform.framework; path = ../framework5/NdComPlatform.framework; sourceTree = "<group>"; };
+		E2C313E619888AA900D97357 /* NdComPlatformInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NdComPlatformInt.framework; path = ../framework5/NdComPlatformInt.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2467D661980D62A0099E181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2AFB93C19D95E580035086E /* UIKit.framework in Frameworks */,
+				E2467D6B1980D62A0099E181 /* CoreFoundation.framework in Frameworks */,
+				E2C313E719888AA900D97357 /* NdComPlatform.framework in Frameworks */,
+				E2C313E819888AA900D97357 /* NdComPlatformInt.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2467D331980D5960099E181 = {
+			isa = PBXGroup;
+			children = (
+				E2467D6C1980D62A0099E181 /* SplusLibrary */,
+				E2467D3E1980D5960099E181 /* Frameworks */,
+				E2467D3D1980D5960099E181 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2467D3D1980D5960099E181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D691980D62A0099E181 /* SplusLibrary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2467D3E1980D5960099E181 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFB93B19D95E580035086E /* UIKit.framework */,
+				E2C313E519888AA900D97357 /* NdComPlatform.framework */,
+				E2C313E619888AA900D97357 /* NdComPlatformInt.framework */,
+				E2467D3F1980D5960099E181 /* Foundation.framework */,
+				E2467D6A1980D62A0099E181 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2467D6C1980D62A0099E181 /* SplusLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D771980D76D0099E181 /* class */,
+				E2467D6D1980D62A0099E181 /* Supporting Files */,
+			);
+			path = SplusLibrary;
+			sourceTree = "<group>";
+		};
+		E2467D6D1980D62A0099E181 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D6E1980D62A0099E181 /* SplusLibrary-Info.plist */,
+				E2467D6F1980D62A0099E181 /* InfoPlist.strings */,
+				E2467D721980D62A0099E181 /* SplusLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2467D771980D76D0099E181 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFB93619D954CA0035086E /* UDID_Tools */,
+				E2467D811980DD5E0099E181 /* Activate */,
+				E2467D861980DD5E0099E181 /* Address */,
+				E2467D881980DD5E0099E181 /* AppInfo */,
+				E2467D8F1980DD5E0099E181 /* DeviceInfo */,
+				E2467D961980DD5E0099E181 /* JSon */,
+				E2467DA71980DD5E0099E181 /* Loading */,
+				E2467DAA1980DD5E0099E181 /* MD5 */,
+				E2467DAD1980DD5E0099E181 /* SafeLib */,
+				E2467DC41980DD5F0099E181 /* Tool */,
+				E2467DCD1980DD5F0099E181 /* UserInfo */,
+				E2467D7C1980D8CC0099E181 /* SplusInterfaceKit.h */,
+				E2467D7D1980D8CC0099E181 /* SplusInterfaceKit.m */,
+				E2467E151980DEB90099E181 /* SplusCallback.h */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		E2467D811980DD5E0099E181 /* Activate */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D821980DD5E0099E181 /* Activate.h */,
+				E2467D831980DD5E0099E181 /* Activate.m */,
+				E2467D841980DD5E0099E181 /* ActivateInfo.h */,
+				E2467D851980DD5E0099E181 /* ActivateInfo.m */,
+			);
+			path = Activate;
+			sourceTree = "<group>";
+		};
+		E2467D861980DD5E0099E181 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D871980DD5E0099E181 /* HttpUrl.h */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		E2467D881980DD5E0099E181 /* AppInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D891980DD5E0099E181 /* AppInfo.h */,
+				E2467D8A1980DD5E0099E181 /* AppInfo.m */,
+				E2467D8B1980DD5E0099E181 /* OrderInfo.h */,
+				E2467D8C1980DD5E0099E181 /* OrderInfo.m */,
+				E2467D8D1980DD5E0099E181 /* SplusUser.h */,
+				E2467D8E1980DD5E0099E181 /* SplusUser.m */,
+			);
+			path = AppInfo;
+			sourceTree = "<group>";
+		};
+		E2467D8F1980DD5E0099E181 /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D901980DD5E0099E181 /* checkWifi.h */,
+				E2467D911980DD5E0099E181 /* checkWifi.m */,
+				E2467D921980DD5E0099E181 /* qqMac.h */,
+				E2467D931980DD5E0099E181 /* qqMac.m */,
+				E2467D941980DD5E0099E181 /* Reachability.h */,
+				E2467D951980DD5E0099E181 /* Reachability.m */,
+			);
+			path = DeviceInfo;
+			sourceTree = "<group>";
+		};
+		E2467D961980DD5E0099E181 /* JSon */ = {
+			isa = PBXGroup;
+			children = (
+				E2467D971980DD5E0099E181 /* JSON.h */,
+				E2467D9A1980DD5E0099E181 /* NSObject+SBJSON.h */,
+				E2467D9B1980DD5E0099E181 /* NSObject+SBJSON.m */,
+				E2467D9C1980DD5E0099E181 /* NSString+SBJSON.h */,
+				E2467D9D1980DD5E0099E181 /* NSString+SBJSON.m */,
+				E2467D9E1980DD5E0099E181 /* SBJsonBase.h */,
+				E2467D9F1980DD5E0099E181 /* SBJsonBase.m */,
+				E2467DA01980DD5E0099E181 /* SBJsonParser.h */,
+				E2467DA11980DD5E0099E181 /* SBJsonParser.m */,
+				E2467DA21980DD5E0099E181 /* SBJsonStreamWriter.h */,
+				E2467DA31980DD5E0099E181 /* SBJsonStreamWriter.m */,
+				E2467DA41980DD5E0099E181 /* SBJsonWriter.h */,
+				E2467DA51980DD5E0099E181 /* SBJsonWriter.m */,
+				E2467DA61980DD5E0099E181 /* SBProxyForJson.h */,
+			);
+			path = JSon;
+			sourceTree = "<group>";
+		};
+		E2467DA71980DD5E0099E181 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				E2467DA81980DD5E0099E181 /* MBProgressHUD.h */,
+				E2467DA91980DD5E0099E181 /* MBProgressHUD.m */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		E2467DAA1980DD5E0099E181 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				E2467DAB1980DD5E0099E181 /* MyMD5.h */,
+				E2467DAC1980DD5E0099E181 /* MyMD5.m */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		E2467DAD1980DD5E0099E181 /* SafeLib */ = {
+			isa = PBXGroup;
+			children = (
+				E2467DB61980DD5E0099E181 /* NSData+ASE128.h */,
+				E2467DB71980DD5E0099E181 /* NSData+ASE128.m */,
+				E2467DBC1980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h */,
+				E2467DBD1980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.m */,
+				E2467DBE1980DD5F0099E181 /* NSString+dataFromHexString.h */,
+				E2467DBF1980DD5F0099E181 /* NSString+dataFromHexString.m */,
+			);
+			path = SafeLib;
+			sourceTree = "<group>";
+		};
+		E2467DC41980DD5F0099E181 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E2467DC51980DD5F0099E181 /* GetImage.h */,
+				E2467DC61980DD5F0099E181 /* GetImage.m */,
+				E2467DC71980DD5F0099E181 /* httpRequest.h */,
+				E2467DC81980DD5F0099E181 /* httpRequest.m */,
+				E2467DC91980DD5F0099E181 /* NSDictionary+QueryBuilder.h */,
+				E2467DCA1980DD5F0099E181 /* NSDictionary+QueryBuilder.m */,
+				E2467DCB1980DD5F0099E181 /* SplusImage.h */,
+				E2467DCC1980DD5F0099E181 /* SplusImage.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E2467DCD1980DD5F0099E181 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E2467DCE1980DD5F0099E181 /* UserData.h */,
+				E2467DCF1980DD5F0099E181 /* UserData.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		E2AFB93619D954CA0035086E /* UDID_Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E2AFB93719D954CA0035086E /* SvUDIDTools.h */,
+				E2AFB93819D954CA0035086E /* SvUDIDTools.m */,
+			);
+			path = UDID_Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E2467D761980D6E10099E181 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2467DEA1980DD5F0099E181 /* SBJsonParser.h in Headers */,
+				E2467E161980DEB90099E181 /* SplusCallback.h in Headers */,
+				E2467DF11980DD5F0099E181 /* MBProgressHUD.h in Headers */,
+				E2467DD91980DD5F0099E181 /* SplusUser.h in Headers */,
+				E2467DD51980DD5F0099E181 /* AppInfo.h in Headers */,
+				E2AFB93919D954CA0035086E /* SvUDIDTools.h in Headers */,
+				E2467DF31980DD5F0099E181 /* MyMD5.h in Headers */,
+				E2467E131980DD5F0099E181 /* UserData.h in Headers */,
+				E2467DE61980DD5F0099E181 /* NSString+SBJSON.h in Headers */,
+				E2467DE11980DD5F0099E181 /* JSON.h in Headers */,
+				E2467DE41980DD5F0099E181 /* NSObject+SBJSON.h in Headers */,
+				E2467DD21980DD5F0099E181 /* ActivateInfo.h in Headers */,
+				E2467E0D1980DD5F0099E181 /* httpRequest.h in Headers */,
+				E2467DEE1980DD5F0099E181 /* SBJsonWriter.h in Headers */,
+				E2467DEC1980DD5F0099E181 /* SBJsonStreamWriter.h in Headers */,
+				E2467D7E1980D8CC0099E181 /* SplusInterfaceKit.h in Headers */,
+				E2467DD71980DD5F0099E181 /* OrderInfo.h in Headers */,
+				E2467E031980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h in Headers */,
+				E2467DD41980DD5F0099E181 /* HttpUrl.h in Headers */,
+				E2467DFD1980DD5F0099E181 /* NSData+ASE128.h in Headers */,
+				E2467DF01980DD5F0099E181 /* SBProxyForJson.h in Headers */,
+				E2467DDD1980DD5F0099E181 /* qqMac.h in Headers */,
+				E2467DDB1980DD5F0099E181 /* checkWifi.h in Headers */,
+				E2467DE81980DD5F0099E181 /* SBJsonBase.h in Headers */,
+				E2467E111980DD5F0099E181 /* SplusImage.h in Headers */,
+				E2467E051980DD5F0099E181 /* NSString+dataFromHexString.h in Headers */,
+				E2467DD01980DD5F0099E181 /* Activate.h in Headers */,
+				E2467E0F1980DD5F0099E181 /* NSDictionary+QueryBuilder.h in Headers */,
+				E2467E0B1980DD5F0099E181 /* GetImage.h in Headers */,
+				E2467DDF1980DD5F0099E181 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E2467D681980D62A0099E181 /* SplusLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2467D731980D62A0099E181 /* Build configuration list for PBXNativeTarget "SplusLibrary" */;
+			buildPhases = (
+				E2467D651980D62A0099E181 /* Sources */,
+				E2467D661980D62A0099E181 /* Frameworks */,
+				E2467D671980D62A0099E181 /* Resources */,
+				E2467D761980D6E10099E181 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplusLibrary;
+			productName = SplusLibrary;
+			productReference = E2467D691980D62A0099E181 /* SplusLibrary.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2467D341980D5960099E181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = akzhang;
+			};
+			buildConfigurationList = E2467D371980D5960099E181 /* Build configuration list for PBXProject "SplusPlatFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E2467D331980D5960099E181;
+			productRefGroup = E2467D3D1980D5960099E181 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2467D681980D62A0099E181 /* SplusLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2467D671980D62A0099E181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2467D711980D62A0099E181 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2467D651980D62A0099E181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2467DF41980DD5F0099E181 /* MyMD5.m in Sources */,
+				E2467E121980DD5F0099E181 /* SplusImage.m in Sources */,
+				E2467DDA1980DD5F0099E181 /* SplusUser.m in Sources */,
+				E2467DD11980DD5F0099E181 /* Activate.m in Sources */,
+				E2467DD61980DD5F0099E181 /* AppInfo.m in Sources */,
+				E2467DE91980DD5F0099E181 /* SBJsonBase.m in Sources */,
+				E2467E041980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.m in Sources */,
+				E2467E141980DD5F0099E181 /* UserData.m in Sources */,
+				E2467DEF1980DD5F0099E181 /* SBJsonWriter.m in Sources */,
+				E2467DDC1980DD5F0099E181 /* checkWifi.m in Sources */,
+				E2AFB93A19D954CA0035086E /* SvUDIDTools.m in Sources */,
+				E2467DF21980DD5F0099E181 /* MBProgressHUD.m in Sources */,
+				E2467E0C1980DD5F0099E181 /* GetImage.m in Sources */,
+				E2467E061980DD5F0099E181 /* NSString+dataFromHexString.m in Sources */,
+				E2467DE51980DD5F0099E181 /* NSObject+SBJSON.m in Sources */,
+				E2467DEB1980DD5F0099E181 /* SBJsonParser.m in Sources */,
+				E2467DD31980DD5F0099E181 /* ActivateInfo.m in Sources */,
+				E2467DDE1980DD5F0099E181 /* qqMac.m in Sources */,
+				E2467D801980D9290099E181 /* SplusInterfaceKit.m in Sources */,
+				E2467DE01980DD5F0099E181 /* Reachability.m in Sources */,
+				E2467DE71980DD5F0099E181 /* NSString+SBJSON.m in Sources */,
+				E2467DED1980DD5F0099E181 /* SBJsonStreamWriter.m in Sources */,
+				E2467DFE1980DD5F0099E181 /* NSData+ASE128.m in Sources */,
+				E2467E101980DD5F0099E181 /* NSDictionary+QueryBuilder.m in Sources */,
+				E2467DD81980DD5F0099E181 /* OrderInfo.m in Sources */,
+				E2467E0E1980DD5F0099E181 /* httpRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E2467D6F1980D62A0099E181 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2467D701980D62A0099E181 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2467D5D1980D5960099E181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E2467D5E1980D5960099E181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2467D741980D62A0099E181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ch/Desktop/Multi_Platform/91/SplusDemo/../../../../../../Volumes/91移动开发平台SDK3.2.6.5",
+					1/SDK/framework5,
+					/Users/ch/Desktop/Multi_Platform/91/framework5,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplusLibrary/SplusLibrary-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SplusLibrary/SplusLibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		E2467D751980D62A0099E181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ch/Desktop/Multi_Platform/91/SplusDemo/../../../../../../Volumes/91移动开发平台SDK3.2.6.5",
+					1/SDK/framework5,
+					/Users/ch/Desktop/Multi_Platform/91/framework5,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SplusLibrary/SplusLibrary-Prefix.pch";
+				INFOPLIST_FILE = "SplusLibrary/SplusLibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2467D371980D5960099E181 /* Build configuration list for PBXProject "SplusPlatFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2467D5D1980D5960099E181 /* Debug */,
+				E2467D5E1980D5960099E181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2467D731980D62A0099E181 /* Build configuration list for PBXNativeTarget "SplusLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2467D741980D62A0099E181 /* Debug */,
+				E2467D751980D62A0099E181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2467D341980D5960099E181 /* Project object */;
+}
