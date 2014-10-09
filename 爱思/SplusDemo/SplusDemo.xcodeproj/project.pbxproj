@@ -20,23 +20,23 @@
 		E23A98271949A2FA00790FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E23A98251949A2FA00790FDF /* InfoPlist.strings */; };
 		E23A98291949A2FA00790FDF /* SplusDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A98281949A2FA00790FDF /* SplusDemoTests.m */; };
 		E23C207319515ED100EC4F37 /* DemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23C207219515ED100EC4F37 /* DemoTest.m */; };
+		E2A9D6A519E6604B0044E380 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6A419E6604B0044E380 /* AudioToolbox.framework */; };
+		E2A9D6A719E660560044E380 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6A619E660560044E380 /* MediaPlayer.framework */; };
+		E2A9D6C919E660F80044E380 /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C219E660F80044E380 /* AlipayRsaLib.a */; };
+		E2A9D6CA19E660F80044E380 /* AlixPaylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C319E660F80044E380 /* AlixPaylib.a */; };
+		E2A9D6CB19E660F80044E380 /* libAsPlatformSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C419E660F80044E380 /* libAsPlatformSDK.a */; };
+		E2A9D6CC19E660F80044E380 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C519E660F80044E380 /* libcrypto.a */; };
+		E2A9D6CD19E660F80044E380 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C619E660F80044E380 /* libssl.a */; };
+		E2A9D6CE19E660F80044E380 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C719E660F80044E380 /* libUPPayPlugin.a */; };
+		E2A9D6CF19E660F80044E380 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A9D6C819E660F80044E380 /* libWeChatSDK.a */; };
+		E2A9D6D119E661320044E380 /* AsImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2A9D6D019E661320044E380 /* AsImage.bundle */; };
 		E2AD7B4D199267FB0017A92B /* SplusLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */; };
-		E2AD7BB6199267FB0017A92B /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2AD7BA1199267FB0017A92B /* Alixpay.bundle */; };
-		E2AD7BC1199267FB0017A92B /* PPImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2AD7BB4199267FB0017A92B /* PPImage.bundle */; };
-		E2AD7BC3199267FB0017A92B /* PPAppPlatformKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BC2199267FB0017A92B /* PPAppPlatformKit.framework */; };
-		E2AD7BC5199267FB0017A92B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BC4199267FB0017A92B /* CoreFoundation.framework */; };
 		E2AD7BC7199267FB0017A92B /* libMobileGestalt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BC6199267FB0017A92B /* libMobileGestalt.dylib */; };
 		E2AD7BC9199267FB0017A92B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BC8199267FB0017A92B /* SystemConfiguration.framework */; };
 		E2AD7BCB199267FB0017A92B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BCA199267FB0017A92B /* CFNetwork.framework */; };
 		E2AD7BCD199267FB0017A92B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BCC199267FB0017A92B /* AdSupport.framework */; };
 		E2AD7BCF199267FB0017A92B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BCE199267FB0017A92B /* QuartzCore.framework */; };
 		E2AD7BD1199267FB0017A92B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BD0199267FB0017A92B /* Security.framework */; };
-		E2AD7BD2199267FB0017A92B /* AlipayRsaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BA0199267FB0017A92B /* AlipayRsaLib.a */; };
-		E2AD7BD3199267FB0017A92B /* AlixPaylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BA2199267FB0017A92B /* AlixPaylib.a */; };
-		E2AD7BD4199267FB0017A92B /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BB1199267FB0017A92B /* libcrypto.a */; };
-		E2AD7BD5199267FB0017A92B /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BB2199267FB0017A92B /* libssl.a */; };
-		E2AD7BD6199267FB0017A92B /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BB3199267FB0017A92B /* libUPPayPlugin.a */; };
-		E2AD7BDA199267FB0017A92B /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BD9199267FB0017A92B /* libstdc++.6.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +68,16 @@
 		E23A98281949A2FA00790FDF /* SplusDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplusDemoTests.m; sourceTree = "<group>"; };
 		E23C207119515ED100EC4F37 /* DemoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTest.h; sourceTree = "<group>"; };
 		E23C207219515ED100EC4F37 /* DemoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTest.m; sourceTree = "<group>"; };
+		E2A9D6A419E6604B0044E380 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E2A9D6A619E660560044E380 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E2A9D6C219E660F80044E380 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AlipayRsaLib.a; path = ../include/AlipayRsaLib.a; sourceTree = "<group>"; };
+		E2A9D6C319E660F80044E380 /* AlixPaylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AlixPaylib.a; path = ../include/AlixPaylib.a; sourceTree = "<group>"; };
+		E2A9D6C419E660F80044E380 /* libAsPlatformSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAsPlatformSDK.a; path = ../include/libAsPlatformSDK.a; sourceTree = "<group>"; };
+		E2A9D6C519E660F80044E380 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../include/libcrypto.a; sourceTree = "<group>"; };
+		E2A9D6C619E660F80044E380 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../include/libssl.a; sourceTree = "<group>"; };
+		E2A9D6C719E660F80044E380 /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUPPayPlugin.a; path = ../include/libUPPayPlugin.a; sourceTree = "<group>"; };
+		E2A9D6C819E660F80044E380 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../include/libWeChatSDK.a; sourceTree = "<group>"; };
+		E2A9D6D019E661320044E380 /* AsImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AsImage.bundle; path = ../include/AsImage.bundle; sourceTree = "<group>"; };
 		E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
 		E2AD7BA0199267FB0017A92B /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
 		E2AD7BA1199267FB0017A92B /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
@@ -76,17 +86,12 @@
 		E2AD7BB2199267FB0017A92B /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		E2AD7BB3199267FB0017A92B /* libUPPayPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUPPayPlugin.a; sourceTree = "<group>"; };
 		E2AD7BB4199267FB0017A92B /* PPImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PPImage.bundle; sourceTree = "<group>"; };
-		E2AD7BC2199267FB0017A92B /* PPAppPlatformKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PPAppPlatformKit.framework; path = /Users/ch/Desktop/Multi_Platform/PP/SplusPlatFramework/../PPAppPlatformKit.framework; sourceTree = "<absolute>"; };
-		E2AD7BC4199267FB0017A92B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		E2AD7BC6199267FB0017A92B /* libMobileGestalt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMobileGestalt.dylib; path = usr/lib/libMobileGestalt.dylib; sourceTree = SDKROOT; };
 		E2AD7BC8199267FB0017A92B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E2AD7BCA199267FB0017A92B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E2AD7BCC199267FB0017A92B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E2AD7BCE199267FB0017A92B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E2AD7BD0199267FB0017A92B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		E2AD7BD7199267FB0017A92B /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Alixpay.bundle; path = ../include/Alixpay.bundle; sourceTree = "<group>"; };
-		E2AD7BD8199267FB0017A92B /* PPImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PPImage.bundle; path = ../include/PPImage.bundle; sourceTree = "<group>"; };
-		E2AD7BD9199267FB0017A92B /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,21 +99,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AD7BDA199267FB0017A92B /* libstdc++.6.dylib in Frameworks */,
-				E2AD7BD2199267FB0017A92B /* AlipayRsaLib.a in Frameworks */,
-				E2AD7BD3199267FB0017A92B /* AlixPaylib.a in Frameworks */,
-				E2AD7BD4199267FB0017A92B /* libcrypto.a in Frameworks */,
-				E2AD7BD5199267FB0017A92B /* libssl.a in Frameworks */,
-				E2AD7BD6199267FB0017A92B /* libUPPayPlugin.a in Frameworks */,
+				E2A9D6C919E660F80044E380 /* AlipayRsaLib.a in Frameworks */,
+				E2A9D6CA19E660F80044E380 /* AlixPaylib.a in Frameworks */,
+				E2A9D6CB19E660F80044E380 /* libAsPlatformSDK.a in Frameworks */,
+				E2A9D6CC19E660F80044E380 /* libcrypto.a in Frameworks */,
+				E2A9D6CD19E660F80044E380 /* libssl.a in Frameworks */,
+				E2A9D6CE19E660F80044E380 /* libUPPayPlugin.a in Frameworks */,
+				E2A9D6CF19E660F80044E380 /* libWeChatSDK.a in Frameworks */,
+				E2A9D6A719E660560044E380 /* MediaPlayer.framework in Frameworks */,
+				E2A9D6A519E6604B0044E380 /* AudioToolbox.framework in Frameworks */,
 				E2AD7BD1199267FB0017A92B /* Security.framework in Frameworks */,
 				E2AD7BCF199267FB0017A92B /* QuartzCore.framework in Frameworks */,
 				E2AD7BCD199267FB0017A92B /* AdSupport.framework in Frameworks */,
 				E2AD7BCB199267FB0017A92B /* CFNetwork.framework in Frameworks */,
 				E2AD7BC9199267FB0017A92B /* SystemConfiguration.framework in Frameworks */,
 				E2AD7BC7199267FB0017A92B /* libMobileGestalt.dylib in Frameworks */,
-				E2AD7BC5199267FB0017A92B /* CoreFoundation.framework in Frameworks */,
 				E23A98061949A2FA00790FDF /* CoreGraphics.framework in Frameworks */,
-				E2AD7BC3199267FB0017A92B /* PPAppPlatformKit.framework in Frameworks */,
 				E23A98081949A2FA00790FDF /* UIKit.framework in Frameworks */,
 				E2AD7B4D199267FB0017A92B /* SplusLibrary.framework in Frameworks */,
 				E23A98041949A2FA00790FDF /* Foundation.framework in Frameworks */,
@@ -131,8 +137,7 @@
 		E23A97F71949A2FA00790FDF = {
 			isa = PBXGroup;
 			children = (
-				E2AD7BD7199267FB0017A92B /* Alixpay.bundle */,
-				E2AD7BD8199267FB0017A92B /* PPImage.bundle */,
+				E2A9D6D019E661320044E380 /* AsImage.bundle */,
 				E23A98091949A2FA00790FDF /* SplusDemo */,
 				E23A98221949A2FA00790FDF /* SplusDemoTests */,
 				E23A98021949A2FA00790FDF /* Frameworks */,
@@ -152,15 +157,21 @@
 		E23A98021949A2FA00790FDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2AD7BD9199267FB0017A92B /* libstdc++.6.dylib */,
+				E2A9D6C219E660F80044E380 /* AlipayRsaLib.a */,
+				E2A9D6C319E660F80044E380 /* AlixPaylib.a */,
+				E2A9D6C419E660F80044E380 /* libAsPlatformSDK.a */,
+				E2A9D6C519E660F80044E380 /* libcrypto.a */,
+				E2A9D6C619E660F80044E380 /* libssl.a */,
+				E2A9D6C719E660F80044E380 /* libUPPayPlugin.a */,
+				E2A9D6C819E660F80044E380 /* libWeChatSDK.a */,
+				E2A9D6A619E660560044E380 /* MediaPlayer.framework */,
+				E2A9D6A419E6604B0044E380 /* AudioToolbox.framework */,
 				E2AD7BD0199267FB0017A92B /* Security.framework */,
 				E2AD7BCE199267FB0017A92B /* QuartzCore.framework */,
 				E2AD7BCC199267FB0017A92B /* AdSupport.framework */,
 				E2AD7BCA199267FB0017A92B /* CFNetwork.framework */,
 				E2AD7BC8199267FB0017A92B /* SystemConfiguration.framework */,
 				E2AD7BC6199267FB0017A92B /* libMobileGestalt.dylib */,
-				E2AD7BC4199267FB0017A92B /* CoreFoundation.framework */,
-				E2AD7BC2199267FB0017A92B /* PPAppPlatformKit.framework */,
 				E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */,
 				E23A98031949A2FA00790FDF /* Foundation.framework */,
 				E23A98051949A2FA00790FDF /* CoreGraphics.framework */,
@@ -236,8 +247,8 @@
 			buildConfigurationList = E23A982C1949A2FA00790FDF /* Build configuration list for PBXNativeTarget "SplusDemo" */;
 			buildPhases = (
 				E23A97FC1949A2FA00790FDF /* Sources */,
-				E23A97FD1949A2FA00790FDF /* Frameworks */,
 				E23A97FE1949A2FA00790FDF /* Resources */,
+				E23A97FD1949A2FA00790FDF /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,8 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AD7BB6199267FB0017A92B /* Alixpay.bundle in Resources */,
-				E2AD7BC1199267FB0017A92B /* PPImage.bundle in Resources */,
+				E2A9D6D119E661320044E380 /* AsImage.bundle in Resources */,
 				E23A980E1949A2FA00790FDF /* InfoPlist.strings in Resources */,
 				E23A98161949A2FA00790FDF /* Images.xcassets in Resources */,
 			);
@@ -472,6 +482,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ch/Desktop/Multi_Platform/PP/include,
+					"/Users/ch/Desktop/Multi_Platform/爱思/include",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -517,6 +528,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/ch/Desktop/Multi_Platform/PP/include,
+					"/Users/ch/Desktop/Multi_Platform/爱思/include",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
