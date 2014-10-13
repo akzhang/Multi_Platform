@@ -169,7 +169,7 @@
      *  @param mPext       附加信息
      */
     
-    [[SplusInterfaceKit sharedInstance] splusQuotaPay:_splusCashTextField.text Type:@"1" serverID:@"1111" serverName:@"湖南一区" RoleId:@"2222" RoleName:@"ak我杀猪" OutOrderId:@"外部订单号ID" Pext:@"扩展ext"];
+    [[SplusInterfaceKit sharedInstance] splusQuotaPay:_splusCashTextField.text Type:@"1" serverID:@"0" serverName:@"湖南一区" RoleId:@"2222" RoleName:@"ak我杀猪" OutOrderId:@"外部订单号ID" Pext:@"扩展ext"];
 }
 
 
@@ -207,6 +207,7 @@
  */
 -(void)SplusActivateOnSuccess
 {
+    [[SplusInterfaceKit sharedInstance] initSplus];
     [[SplusInterfaceKit sharedInstance] splusLogin];
 }
 
@@ -222,59 +223,67 @@
     [self showMessage:@"登录成功"];
 }
 
+-(void)SplusLeavedAcount
+{
+    [self showMessage:@"离开个人中心"];
+}
+
+
 //注销回调
 -(void)SplusLogOutOnSuccess
 {
-    [[SplusInterfaceKit sharedInstance] splusLogin];
+//    [[SplusInterfaceKit sharedInstance] splusLogin];
 }
 
 //支付结果回调
 -(void)SplusPayOnResult:(id)sender
 {
     int loginPageCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
-    switch (loginPageCode) {
-        case 1:
-            /**
-             * 购买成功
-             */
-            [self showMessage:@"购买成功"];
-            break;
-            
-        case 2:
-            /**
-             * 用户离线，禁止访问
-             */
-            [self showMessage:@"用户离线，禁止访问"];
-            break;
-            
-        case 3:
-            /**
-             * 非法访问，可能用户已经下线
-             */
-            [self showMessage:@"非法访问，可能用户已经下线"];
-            break;
-            
-        case 4:
-            /**
-             * 爱思币余额不足 必选参数丢失
-             */
-            [self showMessage:@"爱思币余额不足 必选参数丢失"];
-            break;
-            
-        case 5:
-            /**
-             * 消费金额填写不正确
-             */
-            [self showMessage:@"消费金额填写不正确"];
-            break;
-            
-        default:
-            /**
-             * 用户中途取消
-             */
-            [self showMessage:@"用户中途取消"];
-            break;
-    }
+    NSLog(@"logincode = %d", loginPageCode);
+//    switch (loginPageCode)
+//    {
+//        case 0:
+//            /**
+//             * 购买成功
+//             */
+//            [self showMessage:@"购买成功"];
+//            break;
+//            
+//        case 1:
+//            /**
+//             * 用户离线，禁止访问
+//             */
+//            [self showMessage:@"用户离线，禁止访问"];
+//            break;
+//            
+//        case 2:
+//            /**
+//             * 非法访问，可能用户已经下线
+//             */
+//            [self showMessage:@"非法访问，可能用户已经下线"];
+//            break;
+//            
+//        case 3:
+//            /**
+//             * 爱思币余额不足 必选参数丢失
+//             */
+//            [self showMessage:@"爱思币余额不足 必选参数丢失"];
+//            break;
+//            
+//        case 4:
+//            /**
+//             * 消费金额填写不正确
+//             */
+//            [self showMessage:@"消费金额填写不正确"];
+//            break;
+//            
+//        default:
+//            /**
+//             * 用户中途取消
+//             */
+//            [self showMessage:@"用户中途取消"];
+//            break;
+//    }
 }
 
 

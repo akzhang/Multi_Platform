@@ -38,7 +38,7 @@
      若游戏有根视图控制器（RootViewController），则设置为 self.asViewController(为自己的根视图控制器名称)
      若无根视图控制器，则设置为 nil
      */
-    [[AsInfoKit sharedInstance] setRootViewController:firstDemo];
+//    [[AsInfoKit sharedInstance] setRootViewController:firstDemo];
     
     [[AsPlatformSDK sharedInstance] checkGameUpdate];
 

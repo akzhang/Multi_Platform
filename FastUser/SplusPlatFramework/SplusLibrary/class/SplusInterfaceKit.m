@@ -203,20 +203,39 @@ __strong static SplusInterfaceKit *singleton = nil;
 }
 
 //用户关闭支付界面回调接口
--(void)closePayCalback
+-(void)closePayCallback
 {
-    [_delegate SplusLeavedPay:[OrderInfo sharedSingleton].outOrderid];
+    _payResultCode = @"0";
+    [_delegate SplusLeavedPay:_payResultCode];
 }
 
 //支付宝回调
 -(void)alipayCallBack:(ALIPAYRESULT)alipayresult
 {
-    [_delegate SplusLeavedPay:[OrderInfo sharedSingleton].outOrderid];
+    NSLog(@"支付宝支付");
+    NSLog(@"alipayresult = %u", alipayresult);
+    if (alipayresult == 0) {
+        _payResultCode = @"1";
+    }else{
+        _payResultCode = @"2";
+    }
+    
+    [_delegate SplusLeavedPay:_payResultCode];
 }
 
 -(void)UPPayPluginResult:(UNIPAYTYPE)result
 {
-    [_delegate SplusLeavedPay:[OrderInfo sharedSingleton].outOrderid];
+    NSLog(@"银联支付");
+    if (result == 0) {
+        _payResultCode = @"3";
+    }else if(result == 1){
+        _payResultCode = @"4";
+    }else if(result == 2){
+        _payResultCode = @"5";
+    }else{
+        _payResultCode = @"6";
+    }
+    [_delegate SplusLeavedPay:_payResultCode];
 }
 
 -(void)logSendSMSCallback:(NSString *)phoneNO
@@ -419,7 +438,8 @@ __strong static SplusInterfaceKit *singleton = nil;
         
         if ([[OrderInfo sharedSingleton].type intValue] == 1) {
             //定额支付
-            [[KYSDK instance] showPayWith:orderid fee:[OrderInfo sharedSingleton].money game:[AppInfo sharedSingleton].gameID gamesvr:@"" subject:[OrderInfo sharedSingleton].pext md5Key:[AppInfo sharedSingleton].gameKey userId:[SplusUser sharedSingleton].uid appScheme:@"SplusAlipay"];
+            [[KYSDK instance] showPayWith:orderid fee:[OrderInfo sharedSingleton].money game:[AppInfo sharedSingleton].partnerGameID gamesvr:@"" subject:[OrderInfo sharedSingleton].pext md5Key:@"8mt1oH6pqQr5nmgQqOahqQISmC1c0hA9" userId:[SplusUser sharedSingleton].uid  appScheme:@"SplusAlipay"];
+            
             
         }else
         {

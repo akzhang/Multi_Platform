@@ -95,7 +95,7 @@ static const NSString *MLOGIN_URL = @"http://api.splusgame.com/sdk/login.php";
 
 static const NSString *MACTIVE_URL = @"http://api.splusgame.com/sdk/active.php";
 
-static const NSString *MPAY_URL = @"http://api.splusgame.com/pay/";
+static const NSString *MPAY_URL = @"http://api.splusgame.com/sdk/payIndex.php";
 
 NSString *tipValue;
 

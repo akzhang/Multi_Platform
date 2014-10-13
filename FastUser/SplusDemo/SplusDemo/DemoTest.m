@@ -255,27 +255,38 @@
 //从支付界面离开
 -(void)SplusLeavedPay:(id)sender
 {
-    NSString *payResult = sender;
-    NSLog(@"payResult = %@", payResult);
-    int result = [payResult intValue];
-    if (result == 3) {
-        [self showMessage:@"支付成功"];
-        return;
-    }else if(result == 2)
-    {
-        [self showMessage:@"支付失败"];
-        return;
-    }else if(result == 1)
-    {
-        [self showMessage:@"充值中"];
-        return;
-    }else if(result == 0)
-    {
-        [self showMessage:@"待支付"];
-        return;
+    int payCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
+    if (payCode == 1) {
+        /**
+         * 支付宝回调支付出错，或者退出
+         */
+        [self showMessage:@"支付宝回调支付出错，或者退出"];
+    }else if (payCode == 2){
+        /**
+         * 支付宝回调支付完成，结果是否正确请以服务器端通告为准
+         */
+        [self showMessage:@"支付宝回调支付完成，结果是否正确请以服务器端通告为准"];
+    }else if (payCode == 3){
+        /**
+         * 用户银联支付成功
+         */
+        [self showMessage:@"用户银联支付成功"];
+    }else if (payCode == 4){
+        /**
+         * 用户银联支付失败
+         */
+        [self showMessage:@"用户银联支付失败"];
+    }else if (payCode == 5){
+        /**
+         * 用户取消银联支付
+         */
+        [self showMessage:@"用户取消银联支付"];
+    }else{
+        /**
+         * 银联没有返回结果
+         */
+        [self showMessage:@"银联没有返回结果"];
     }
-    
-    
 }
 
 -(void)showMessage:(NSString*)msg

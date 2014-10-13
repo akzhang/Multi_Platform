@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <SplusIosSdk/SplusInterfaceKit.h>
+#import <PPAppPlatformKit/PPAppPlatformKit.h>
 
 @implementation AppDelegate
 

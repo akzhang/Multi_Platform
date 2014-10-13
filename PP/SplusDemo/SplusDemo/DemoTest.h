@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PPAppPlatformKit/PPAppPlatformKit.h>
 
-@interface DemoTest : UIViewController<UITextFieldDelegate,PPAppPlatformKitDelegate>
+@interface DemoTest : UIViewController<UITextFieldDelegate>
 
 @property(nonatomic, strong)IBOutlet UIView *splusDemoView;//背景
 

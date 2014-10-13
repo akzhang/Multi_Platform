@@ -115,6 +115,7 @@
     _splusHideToolBar = [[UIButton alloc] initWithFrame:CGRectMake(130, 260, 150, 50)];
     [_splusHideToolBar setTitle:@"隐藏悬浮窗" forState:UIControlStateNormal];
     [_splusHideToolBar setBackgroundColor:[UIColor orangeColor]];
+    [_splusHideToolBar setHidden:YES];
     [_splusHideToolBar setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_splusHideToolBar addTarget:self action:@selector(splusHideBar:) forControlEvents: UIControlEventTouchUpInside];//处理点击
     [self.view addSubview:_splusHideToolBar];
@@ -237,7 +238,7 @@
 //注销回调
 -(void)SplusLogOutOnSuccess
 {
-    [[SplusInterfaceKit sharedInstance] splusLogin];
+
 }
 
 //从登录页面离开

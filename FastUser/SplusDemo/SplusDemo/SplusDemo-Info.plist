@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.7659.sdkdemo</string>
+	<string>com.amazing.magicage.ky</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -55,9 +55,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>PartnerGameID</key>
-	<string>140785</string>
+	<string>6745</string>
 	<key>PartnerKey</key>
-	<string>Obyo1LiXk8SeUrBODbn#1KXukRHeTB4O</string>
+	<string>8a81aa91c6634889975cdeb31c035b8e</string>
 	<key>GameID</key>
 	<string>1000001</string>
 	<key>GameKey</key>

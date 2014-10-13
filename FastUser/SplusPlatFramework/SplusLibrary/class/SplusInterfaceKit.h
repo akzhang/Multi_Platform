@@ -23,6 +23,8 @@
 
 @property(nonatomic, strong)MBProgressHUD *HUD;
 
+@property(nonatomic, strong)NSString *payResultCode;
+
 /**
  *  API单例
  *

@@ -21,9 +21,9 @@
 		E23A98271949A2FA00790FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E23A98251949A2FA00790FDF /* InfoPlist.strings */; };
 		E23A98291949A2FA00790FDF /* SplusDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A98281949A2FA00790FDF /* SplusDemoTests.m */; };
 		E23C207319515ED100EC4F37 /* DemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23C207219515ED100EC4F37 /* DemoTest.m */; };
-		E2467E3E1980E99F0099E181 /* SplusLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2467E3D1980E99F0099E181 /* SplusLibrary.framework */; };
 		E2467E461980F9790099E181 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2467E451980F9790099E181 /* QuartzCore.framework */; };
 		E2467E481980F9860099E181 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2467E471980F9860099E181 /* MessageUI.framework */; };
+		E294C92219E8FFF100DB6C23 /* SplusLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E294C92119E8FFF100DB6C23 /* SplusLibrary.framework */; };
 		E2A17B78196F8B1B001EC392 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A17B77196F8B1B001EC392 /* libstdc++.6.dylib */; };
 		E2A17B7C196F9525001EC392 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A17B7B196F9525001EC392 /* SystemConfiguration.framework */; };
 		E2AA093C1987900C00C07629 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AA093B1987900C00C07629 /* libsqlite3.dylib */; };
@@ -70,9 +70,9 @@
 		E23A98281949A2FA00790FDF /* SplusDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplusDemoTests.m; sourceTree = "<group>"; };
 		E23C207119515ED100EC4F37 /* DemoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTest.h; sourceTree = "<group>"; };
 		E23C207219515ED100EC4F37 /* DemoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTest.m; sourceTree = "<group>"; };
-		E2467E3D1980E99F0099E181 /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TBplat-abwusxkgqloyvlaogptalejriocz/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
 		E2467E451980F9790099E181 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E2467E471980F9860099E181 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E294C92119E8FFF100DB6C23 /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/91Plat-dfopeltmwjtjkuelrkvawlsoskua/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
 		E2A17B77196F8B1B001EC392 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		E2A17B7B196F9525001EC392 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E2AA093B1987900C00C07629 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -96,6 +96,7 @@
 			files = (
 				E2C313E219888A7400D97357 /* NDJSON.framework in Frameworks */,
 				E2C313E319888A7400D97357 /* NDUtility.framework in Frameworks */,
+				E294C92219E8FFF100DB6C23 /* SplusLibrary.framework in Frameworks */,
 				E2AA093E1987901A00C07629 /* libz.dylib in Frameworks */,
 				E2AA093C1987900C00C07629 /* libsqlite3.dylib in Frameworks */,
 				E2AE5A6619877D3800D7EBB5 /* AssetsLibrary.framework in Frameworks */,
@@ -104,7 +105,6 @@
 				E2467E481980F9860099E181 /* MessageUI.framework in Frameworks */,
 				E2467E461980F9790099E181 /* QuartzCore.framework in Frameworks */,
 				E2A17B7C196F9525001EC392 /* SystemConfiguration.framework in Frameworks */,
-				E2467E3E1980E99F0099E181 /* SplusLibrary.framework in Frameworks */,
 				E2A17B78196F8B1B001EC392 /* libstdc++.6.dylib in Frameworks */,
 				E2CC66D31962D0D700566EA3 /* AdSupport.framework in Frameworks */,
 				E202B79F19580E10003C70B9 /* CoreTelephony.framework in Frameworks */,
@@ -160,12 +160,12 @@
 				E2C313DE19888A7400D97357 /* NetEngine.framework */,
 				E2AA093D1987901A00C07629 /* libz.dylib */,
 				E2AA093B1987900C00C07629 /* libsqlite3.dylib */,
+				E294C92119E8FFF100DB6C23 /* SplusLibrary.framework */,
 				E2AE5A6519877D3800D7EBB5 /* AssetsLibrary.framework */,
 				E2AE5A6319877D2900D7EBB5 /* AddressBook.framework */,
 				E2AE5A4F19877B5900D7EBB5 /* NdComPlatform_SNS_Resources.bundle */,
 				E2467E471980F9860099E181 /* MessageUI.framework */,
 				E2467E451980F9790099E181 /* QuartzCore.framework */,
-				E2467E3D1980E99F0099E181 /* SplusLibrary.framework */,
 				E2A17B7B196F9525001EC392 /* SystemConfiguration.framework */,
 				E2A17B77196F8B1B001EC392 /* libstdc++.6.dylib */,
 				E2CC66D21962D0D700566EA3 /* AdSupport.framework */,
@@ -458,6 +458,7 @@
 					1/SDK/framework5,
 					"/Volumes/91移动开发平台SDK3.2.6.5",
 					1/SDK/framework5/framework,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/91Plat-dfopeltmwjtjkuelrkvawlsoskua/Build/Products/Debug-iphoneos",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -497,6 +498,7 @@
 					1/SDK/framework5,
 					"/Volumes/91移动开发平台SDK3.2.6.5",
 					1/SDK/framework5/framework,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/91Plat-dfopeltmwjtjkuelrkvawlsoskua/Build/Products/Debug-iphoneos",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

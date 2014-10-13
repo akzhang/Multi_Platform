@@ -82,6 +82,7 @@
     //splus Pay
     _splusPayDemo = [[UIButton alloc] initWithFrame:CGRectMake(20, 140, 100, 50)];
     [_splusPayDemo setTitle:@"非定额支付" forState:UIControlStateNormal];
+    [_splusPayDemo setHidden:YES];
     [_splusPayDemo setBackgroundColor:[UIColor orangeColor]];
     [_splusPayDemo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_splusPayDemo addTarget:self action:@selector(splusStartPayClick:) forControlEvents: UIControlEventTouchUpInside];//处理点击
@@ -97,6 +98,7 @@
     
     _splusCashTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 200, 150, 50)];
     _splusCashTextField.placeholder = @"请输入金额";
+    [_splusCashTextField setHidden:YES];
     _splusCashTextField.delegate = self;
     //top view
     UIEdgeInsets topinsets = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -235,19 +237,25 @@
     [self showMessage:@"登录成功"];
 }
 
-//从个人中心离开
+/**
+ *  离开个人中心回调
+ */
 -(void)SplusLeavedAcount
 {
     [self showMessage:@"从个人中心离开,回到游戏"];
 }
 
-//从登录页面离开
+/**
+ *  从登录页面离开回调
+ */
 -(void)SplusLeavedLogin
 {
     [self showMessage:@"从登录界面离开,回到游戏"];
 }
 
-//从支付界面离开
+/**
+ *  从支付界面离开回调
+ */
 -(void)SplusLeavedPay:(id)sender
 {
     [self showMessage:@"从支付界面离开"];

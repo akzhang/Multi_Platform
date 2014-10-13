@@ -45,7 +45,7 @@ __strong static SplusInterfaceKit *singleton = nil;
 }
 
 /**
- *  设置委托
+ *  设置委托ƒ
  *
  *  @param argDelegate 委托
  */
@@ -222,7 +222,7 @@ __strong static SplusInterfaceKit *singleton = nil;
 
 - (void)asVerifyingUpdatePassCallBack
 {
-    [[AsPlatformSDK sharedInstance] showLogin];
+//    [[AsPlatformSDK sharedInstance] showLogin];
 }
 
 - (void)asLoginCallBack:(NSString *)paramToken
@@ -231,7 +231,7 @@ __strong static SplusInterfaceKit *singleton = nil;
     NSLog(@"爱思助手");
     NSLog(@"paramStrToKenkey =%@", paramToken);
     //此URL为测试demo。请自行更改地址
-    NSString *requestURLStr = [NSString stringWithFormat:@"https://pay.i4.cn/member_game.action?token=%@",paramToken];
+    NSString *requestURLStr = [NSString stringWithFormat:@"http://api.splusgame.com/sdk/login.php?token=%@",paramToken];
     NSURL *requestUrl = [[NSURL alloc] initWithString:[requestURLStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
 
@@ -279,16 +279,18 @@ __strong static SplusInterfaceKit *singleton = nil;
     sign = [sign stringByAppendingFormat:@"%@%@%@%@%@%@", deviceNo, gameID, partner, sourceID, mTime, gameKey];
     
     NSLog(@"Md5 sign = %@", [MyMD5 md5:sign]);
+    NSString *gameUid = [NSString stringWithFormat:@"%llu",[[AsPlatformSDK sharedInstance] currentUserId]];
+    NSString *gameUserName = [[AsPlatformSDK sharedInstance] currentUserName];
     
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:gameID, @"gameid",
                                 deviceNo, @"deviceno",
                                 sourceID,@"referer",
                                 partner, @"partner",
                                 @"", @"partner_sessionid",
-                                [[AsPlatformSDK sharedInstance] currentUserId], @"partner_uid",
+                                gameUid, @"partner_uid",
                                 paramToken, @"partner_token",
                                 @"", @"partner_nickname",
-                                [[AsPlatformSDK sharedInstance] currentUserName], @"partner_username",
+                                gameUserName, @"partner_username",
                                 sourceID, @"partner_appid",
                                 mTime, @"time",
                                 @"1",@"debug",
@@ -464,7 +466,7 @@ __strong static SplusInterfaceKit *singleton = nil;
  */
 -(void)initSplus
 {
-    
+    [[AsPlatformSDK sharedInstance] setDelegate:self];
 }
 
 
