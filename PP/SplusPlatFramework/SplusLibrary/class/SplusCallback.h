@@ -48,4 +48,7 @@
 //从支付界面离开
 -(void)SplusLeavedPay:(id)sender;
 
+//检测更新回调
+-(void)SplusCheckUpdate;
+
 @end

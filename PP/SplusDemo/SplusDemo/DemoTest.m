@@ -258,6 +258,18 @@
     
 }
 
+/**
+ *  检测更新回调
+ *
+ *  @param msg <#msg description#>
+ */
+-(void)SplusCheckUpdate
+{
+    [self showMessage:@"检测更新回调"];
+}
+
+
+
 -(void)showMessage:(NSString*)msg
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];

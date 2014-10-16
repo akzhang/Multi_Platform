@@ -267,7 +267,12 @@ __strong static SplusInterfaceKit *singleton = nil;
     [_delegate SplusLeavedAcount];
 }
 
-
+//检测更新回调
+-(void)ppVerifyingUpdatePassCallBack
+{
+    NSLog(@"检测更新回调");
+    [_delegate SplusCheckUpdate];
+}
 
 //关闭WEB页面回调方法
 - (void)ppCloseWebViewCallBack:(PPWebViewCode)paramPPWebViewCode{

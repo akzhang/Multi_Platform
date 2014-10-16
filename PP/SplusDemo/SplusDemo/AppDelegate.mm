@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <SplusLibrary/SplusInterfaceKit.h>
 #import <PPAppPlatformKit/PPAppPlatformKit.h>
 
 @implementation AppDelegate
@@ -40,12 +41,12 @@
     [[PPAppPlatformKit sharedInstance] setIsLogOutPushLoginView:YES];
     [[PPAppPlatformKit sharedInstance] setIsOpenRecharge:YES];
     [[PPAppPlatformKit sharedInstance] setCloseRechargeAlertMessage:@"关闭充值提示语"];
-    
-    [[PPUIKit sharedInstance] checkGameUpdate];
+    [[PPAppPlatformKit sharedInstance] setDelegate:[SplusInterfaceKit sharedInstance]];
     [PPUIKit setIsDeviceOrientationLandscapeLeft:YES];
     [PPUIKit setIsDeviceOrientationLandscapeRight:YES];
     [PPUIKit setIsDeviceOrientationPortrait:YES];
     [PPUIKit setIsDeviceOrientationPortraitUpsideDown:YES];
+    [[PPUIKit sharedInstance] checkGameUpdate];
 
     return YES;
 }
