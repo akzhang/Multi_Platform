@@ -82,6 +82,7 @@
     _splusPayDemo = [[UIButton alloc] initWithFrame:CGRectMake(20, 140, 100, 50)];
     [_splusPayDemo setTitle:@"非定额支付" forState:UIControlStateNormal];
     [_splusPayDemo setBackgroundColor:[UIColor orangeColor]];
+    [_splusPayDemo setHidden:YES];
     [_splusPayDemo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_splusPayDemo addTarget:self action:@selector(splusStartPayClick:) forControlEvents: UIControlEventTouchUpInside];//处理点击
     [self.view addSubview:_splusPayDemo];
@@ -190,6 +191,7 @@
  */
 - (void)splusStartActivateClick:(id)sender {
     [[SplusInterfaceKit sharedInstance] activate];
+    [[SplusInterfaceKit sharedInstance] splusLogin];
 }
 
 /**
@@ -221,14 +223,6 @@
 }
 
 /**
- *  注销回调
- */
--(void)SplusLogOutOnSuccess
-{
-    [[SplusInterfaceKit sharedInstance] splusLogin];
-}
-
-/**
  *  登录成功回调
  *
  *  @param callbackUser callbackUser.uid , sessiond用来跟服务器验证
@@ -240,53 +234,38 @@
     [self showMessage:@"登录成功"];
 }
 
-//从个人中心离开
+/**
+ *  注销回调
+ */
+-(void)SplusLogOutOnSuccess
+{
+    [[SplusInterfaceKit sharedInstance] splusLogin];
+}
+
+/**
+ *  离开个人中心回调
+ */
 -(void)SplusLeavedAcount
 {
     [self showMessage:@"从个人中心离开,回到游戏"];
 }
 
-//从登录页面离开
--(void)SplusLeavedLogin
-{
-    [self showMessage:@"从登录界面离开,回到游戏"];
-}
-
-//从支付界面离开
+/**
+ *  从支付界面离开回调
+ */
 -(void)SplusLeavedPay:(id)sender
 {
-    int payCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
-    if (payCode == 1) {
-        /**
-         * 支付宝回调支付出错，或者退出
-         */
-        [self showMessage:@"支付宝回调支付出错，或者退出"];
-    }else if (payCode == 2){
-        /**
-         * 支付宝回调支付完成，结果是否正确请以服务器端通告为准
-         */
-        [self showMessage:@"支付宝回调支付完成，结果是否正确请以服务器端通告为准"];
-    }else if (payCode == 3){
-        /**
-         * 用户银联支付成功
-         */
-        [self showMessage:@"用户银联支付成功"];
-    }else if (payCode == 4){
-        /**
-         * 用户银联支付失败
-         */
-        [self showMessage:@"用户银联支付失败"];
-    }else if (payCode == 5){
-        /**
-         * 用户取消银联支付
-         */
-        [self showMessage:@"用户取消银联支付"];
-    }else{
-        /**
-         * 银联没有返回结果
-         */
-        [self showMessage:@"银联没有返回结果"];
+    int resultCode = [sender intValue];
+    if (resultCode == 0) {
+        [self showMessage:@"支付成功"];
+    }else if(resultCode == 1)
+    {
+        [self showMessage:@"支付失败"];
+    }else
+    {
+        [self showMessage:@"关闭支付界面"];
     }
+    
 }
 
 -(void)showMessage:(NSString*)msg

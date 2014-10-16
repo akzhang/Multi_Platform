@@ -171,15 +171,13 @@ __strong static SplusInterfaceKit *singleton = nil;
 
 - (void)asPayResultCallBack:(AsPayResultCode)paramPayResultCode
 {
-    if (paramPayResultCode == 1) {
+    if (paramPayResultCode == 0) {
+        _payPageCode = @"0";
+    }else{
         _payPageCode = @"1";
-    }else if (paramPayResultCode == 2){
-        _payPageCode = @"2";
-    }else if (paramPayResultCode == 3){
-        _payPageCode = @"3";
     }
     
-    [_delegate SplusPayOnResult:_payPageCode];//支付结果回调
+    [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
 }
 
 - (void)asLogOffCallBack
@@ -199,30 +197,19 @@ __strong static SplusInterfaceKit *singleton = nil;
 
 - (void)asClosePageViewCallBack:(AsPageCode)paramPPPageCode
 {
-    if (paramPPPageCode == 1) {
-        _payPageCode = @"1";
-    }else if (paramPPPageCode == 2){
-        _payPageCode = @"2";
-    }
-    
-    [_delegate SplusLeavedWebManage:_payPageCode];//关闭登录、注册界面
+    [_delegate SplusLeavedAcount];
 }
 
 
 - (void)asCloseWebViewCallBack:(AsWebViewCode)paramWebViewCode
 {
-    if (paramWebViewCode == 1) {
-        _payPageCode = @"1";
-    }else if (paramWebViewCode == 2){
         _payPageCode = @"2";
-    }
-    
-    [_delegate SplusLeavedWebPay:_payPageCode];//关闭支付界面
+    [_delegate SplusLeavedPay:_payPageCode];//关闭支付界面
 }
 
 - (void)asVerifyingUpdatePassCallBack
 {
-//    [[AsPlatformSDK sharedInstance] showLogin];
+    [_delegate SplusCheckUpdate];
 }
 
 - (void)asLoginCallBack:(NSString *)paramToken

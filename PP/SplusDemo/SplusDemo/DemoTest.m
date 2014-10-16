@@ -44,7 +44,7 @@
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self initLoginView];
-    
+    [[SplusInterfaceKit sharedInstance] initSplus];
     // Do any additional setup after loading the view.
 }
 
@@ -81,6 +81,7 @@
     //splus Pay
     _splusPayDemo = [[UIButton alloc] initWithFrame:CGRectMake(20, 140, 100, 50)];
     [_splusPayDemo setTitle:@"非定额支付" forState:UIControlStateNormal];
+    [_splusPayDemo setHidden:YES];
     [_splusPayDemo setBackgroundColor:[UIColor orangeColor]];
     [_splusPayDemo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_splusPayDemo addTarget:self action:@selector(splusStartPayClick:) forControlEvents: UIControlEventTouchUpInside];//处理点击
@@ -223,68 +224,39 @@
     [self showMessage:@"登录成功"];
 }
 
-//支付成功回调
--(void)SplusPayOnSuccess:(id)sender
-{
-    [self showMessage:@"支付成功回调"];
-}
-
-//支付失败回调
--(void)SplusPayOnFailure
-{
-    [self showMessage:@"支付失败回调"];
-}
-
-//注销回调
+/**
+ *  注销回调
+ */
 -(void)SplusLogOutOnSuccess
 {
 
 }
 
-//从登录页面离开
--(void)SplusLeavedLogin:(id)sender
+/**
+ *  离开个人中心回调
+ */
+-(void)SplusLeavedAcount
 {
-    int loginPageCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
-    if (loginPageCode == 1) {
-        /**
-         * 关闭接口为登录页面
-         */
-        [self showMessage:@"关闭登录页面回调"];
-    }else if (loginPageCode == 2){
-        /**
-         * 关闭接口为登录页面
-         */
-        [self showMessage:@"关闭注册页面回调"];
-    }else if (loginPageCode == 3){
-        /**
-         * 关闭接口为登录页面
-         */
-        [self showMessage:@"其它页面退出回调"];
-    }
+    [self showMessage:@"从个人中心离开,回到游戏"];
 }
 
-//从web页面离开
--(void)SplusLeavedWeb:(id)sender
+/**
+ *  从支付界面离开回调
+ */
+-(void)SplusLeavedPay:(id)sender
 {
-    int webPageCode = [sender intValue];
-    if (webPageCode == 1) {
-        /**
-         * 关闭充值页面
-         */
-        [self showMessage:@"关闭充值页面"];
-    }else if (webPageCode == 2){
-        /**
-         * 关闭兑换页面
-         */
-        [self showMessage:@"关闭兑换页面"];
-    }else if (webPageCode == 3){
-        /**
-         * WEB其他页面关闭
-         */
-        [self showMessage:@"WEB其他页面关闭"];
+    int resultCode = [sender intValue];
+    if (resultCode == 0) {
+        [self showMessage:@"支付成功"];
+    }else if(resultCode == 1)
+    {
+        [self showMessage:@"支付失败"];
+    }else
+    {
+        [self showMessage:@"关闭支付界面"];
     }
+    
 }
-
 
 -(void)showMessage:(NSString*)msg
 {

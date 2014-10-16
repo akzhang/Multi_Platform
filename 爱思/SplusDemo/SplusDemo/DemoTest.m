@@ -82,6 +82,7 @@
     _splusPayDemo = [[UIButton alloc] initWithFrame:CGRectMake(20, 140, 100, 50)];
     [_splusPayDemo setTitle:@"非定额支付" forState:UIControlStateNormal];
     [_splusPayDemo setBackgroundColor:[UIColor orangeColor]];
+    [_splusPayDemo setHidden:YES];
     [_splusPayDemo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_splusPayDemo addTarget:self action:@selector(splusStartPayClick:) forControlEvents: UIControlEventTouchUpInside];//处理点击
     [self.view addSubview:_splusPayDemo];
@@ -115,6 +116,7 @@
     _splusHideToolBar = [[UIButton alloc] initWithFrame:CGRectMake(130, 260, 150, 50)];
     [_splusHideToolBar setTitle:@"隐藏悬浮窗" forState:UIControlStateNormal];
     [_splusHideToolBar setBackgroundColor:[UIColor orangeColor]];
+    [_splusHideToolBar setHidden:YES];
     [_splusHideToolBar setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_splusHideToolBar addTarget:self action:@selector(splusHideBar:) forControlEvents: UIControlEventTouchUpInside];//处理点击
     [self.view addSubview:_splusHideToolBar];
@@ -223,11 +225,6 @@
     [self showMessage:@"登录成功"];
 }
 
--(void)SplusLeavedAcount
-{
-    [self showMessage:@"离开个人中心"];
-}
-
 
 //注销回调
 -(void)SplusLogOutOnSuccess
@@ -235,92 +232,38 @@
 //    [[SplusInterfaceKit sharedInstance] splusLogin];
 }
 
-//支付结果回调
--(void)SplusPayOnResult:(id)sender
+/**
+ *  离开个人中心回调
+ */
+-(void)SplusLeavedAcount
 {
-    int loginPageCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
-    NSLog(@"logincode = %d", loginPageCode);
-//    switch (loginPageCode)
-//    {
-//        case 0:
-//            /**
-//             * 购买成功
-//             */
-//            [self showMessage:@"购买成功"];
-//            break;
-//            
-//        case 1:
-//            /**
-//             * 用户离线，禁止访问
-//             */
-//            [self showMessage:@"用户离线，禁止访问"];
-//            break;
-//            
-//        case 2:
-//            /**
-//             * 非法访问，可能用户已经下线
-//             */
-//            [self showMessage:@"非法访问，可能用户已经下线"];
-//            break;
-//            
-//        case 3:
-//            /**
-//             * 爱思币余额不足 必选参数丢失
-//             */
-//            [self showMessage:@"爱思币余额不足 必选参数丢失"];
-//            break;
-//            
-//        case 4:
-//            /**
-//             * 消费金额填写不正确
-//             */
-//            [self showMessage:@"消费金额填写不正确"];
-//            break;
-//            
-//        default:
-//            /**
-//             * 用户中途取消
-//             */
-//            [self showMessage:@"用户中途取消"];
-//            break;
-//    }
+    [self showMessage:@"从个人中心离开,回到游戏"];
 }
 
-
-//关闭登录或者注册界面
--(void)SplusLeavedWebManage:(id)sender
+/**
+ *  从支付界面离开回调
+ */
+-(void)SplusLeavedPay:(id)sender
 {
-    int loginPageCode = [sender intValue];//loginPageCode为相应页面关闭后callback 返回值
-    if (loginPageCode == 1) {
-        /**
-         * 关闭接口为登录页面
-         */
-        [self showMessage:@"关闭登录页面回调"];
-    }else if (loginPageCode == 2){
-        /**
-         * 关闭接口为登录页面
-         */
-        [self showMessage:@"关闭注册页面回调"];
+    int resultCode = [sender intValue];
+    if (resultCode == 0) {
+        //支付成功
+        NSLog(@"支付成功");
+    }else if(resultCode == 1)
+    {
+        [self showMessage:@"支付失败"];
+    }else
+    {
+        [self showMessage:@"关闭支付界面"];
     }
+    
 }
 
-//关闭充值界面
--(void)SplusLeavedWebPay:(id)sender
+//检测更新回调
+-(void)SplusCheckUpdate
 {
-    int webPageCode = [sender intValue];
-    if (webPageCode == 1) {
-        /**
-         * 关闭充值页面
-         */
-        [self showMessage:@"关闭充值页面"];
-    }else if (webPageCode == 2){
-        /**
-         * 关闭兑换页面
-         */
-        [self showMessage:@"关闭兑换页面"];
-    }
+    [self showMessage:@"检测更新回调"];
 }
-
 
 -(void)showMessage:(NSString*)msg
 {

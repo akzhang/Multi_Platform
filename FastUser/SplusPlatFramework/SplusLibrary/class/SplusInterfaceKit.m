@@ -205,7 +205,7 @@ __strong static SplusInterfaceKit *singleton = nil;
 //用户关闭支付界面回调接口
 -(void)closePayCallback
 {
-    _payResultCode = @"0";
+    _payResultCode = @"2";//关闭支付页面
     [_delegate SplusLeavedPay:_payResultCode];
 }
 
@@ -215,9 +215,9 @@ __strong static SplusInterfaceKit *singleton = nil;
     NSLog(@"支付宝支付");
     NSLog(@"alipayresult = %u", alipayresult);
     if (alipayresult == 0) {
-        _payResultCode = @"1";
+        _payResultCode = @"1";//失败
     }else{
-        _payResultCode = @"2";
+        _payResultCode = @"0";//支付宝支付成功
     }
     
     [_delegate SplusLeavedPay:_payResultCode];
@@ -227,13 +227,9 @@ __strong static SplusInterfaceKit *singleton = nil;
 {
     NSLog(@"银联支付");
     if (result == 0) {
-        _payResultCode = @"3";
-    }else if(result == 1){
-        _payResultCode = @"4";
-    }else if(result == 2){
-        _payResultCode = @"5";
+        _payResultCode = @"0";
     }else{
-        _payResultCode = @"6";
+        _payResultCode = @"1";
     }
     [_delegate SplusLeavedPay:_payResultCode];
 }

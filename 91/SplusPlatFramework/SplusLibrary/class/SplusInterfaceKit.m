@@ -325,11 +325,11 @@ __strong static SplusInterfaceKit *singleton = nil;
                 strError = @"购买过程发生错误";
             break; }
         str = [str stringByAppendingFormat:@"\n%@", strError];
-        [_delegate SplusLeavedPay:[OrderInfo sharedSingleton].outOrderid];
+        [_delegate SplusLeavedPay:@"1"];
     }
     else {
         //TODO: 购买成功处理
-        [_delegate SplusLeavedPay:[OrderInfo sharedSingleton].outOrderid];
+        [_delegate SplusLeavedPay:@"0"];
     }
     //本次购买的请求参数
     NdBuyInfo* buyInfo = (NdBuyInfo*)[dic objectForKey:@"buyInfo"];

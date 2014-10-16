@@ -12,19 +12,17 @@
 
 @protocol SplusCallback <NSObject>
 
+//激活回调
 -(void)SplusActivateOnSuccess;
 
+//登录成功回调
 -(void)SplusLoginOnSuccess:(SplusUser*)callbackUser;
 
--(void)SplusAcountOnSuccess;
-
+//注销回调
 -(void)SplusLogOutOnSuccess;
 
 //从个人中心离开
 -(void)SplusLeavedAcount;
-
-//从登录页面离开
--(void)SplusLeavedLogin;
 
 //从支付界面离开
 -(void)SplusLeavedPay:(id)sender;

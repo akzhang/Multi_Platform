@@ -224,7 +224,7 @@ __strong static SplusInterfaceKit *singleton = nil;
     switch (leavedFromType) {
             //从登录页离开
         case TBPlatformLeavedFromLogin:{
-            [_delegate SplusLeavedLogin];
+            [_delegate SplusLeavedAcount];
         }
             break;
             //从个人中心离开
@@ -237,6 +237,7 @@ __strong static SplusInterfaceKit *singleton = nil;
             NSString *orderString = [notifyUserInfo objectForKey:TBLeavedPlatformOrderKey];
             [[TBPlatform defaultPlatform] TBCheckPaySuccess:orderString
                                                    delegate:self];
+            _payResultCode = @"2";
             [_delegate SplusLeavedPay:_payResultCode];
         }
             break;
@@ -518,8 +519,8 @@ __strong static SplusInterfaceKit *singleton = nil;
 - (void)TBBuyGoodsDidSuccessWithOrder:(NSString*)order{
     
     NSLog(@"支付成功。。。。。。");
-    _payResultCode = @"3";
-//    [_delegate SplusLeavedPay:_payResultCode];
+    _payResultCode = @"0";
+    [_delegate SplusLeavedPay:_payResultCode];
 }
 
 /**
@@ -530,8 +531,8 @@ __strong static SplusInterfaceKit *singleton = nil;
  */
 - (void)TBBuyGoodsDidFailedWithOrder:(NSString *)order
                           resultCode:(TB_BUYGOODS_ERROR)errorType{
-     _payResultCode = @"2";
-//    [_delegate SplusLeavedPay:_payResultCode];
+     _payResultCode = @"1";
+    [_delegate SplusLeavedPay:_payResultCode];
 }
 
 /**
@@ -571,11 +572,11 @@ __strong static SplusInterfaceKit *singleton = nil;
     NSLog(@"statusType = %d", statusType);
     
     if (statusType == TBCheckOrderStatusSuccess) {
-        _payResultCode = @"3";
+        _payResultCode = @"0";
     }
     else if(statusType == TBCheckOrderStatusFailed)
     {
-        _payResultCode = @"2";
+        _payResultCode = @"1";
     }
     else if(statusType == TBCheckOrderStatusPaying)
     {
@@ -583,7 +584,7 @@ __strong static SplusInterfaceKit *singleton = nil;
     }
     else if(statusType == TBCheckOrderStatusWaitingForPay)
     {
-        _payResultCode = @"0";
+        _payResultCode = @"1";
     }
     
 }

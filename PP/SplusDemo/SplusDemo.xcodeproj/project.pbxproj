@@ -20,7 +20,6 @@
 		E23A98271949A2FA00790FDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E23A98251949A2FA00790FDF /* InfoPlist.strings */; };
 		E23A98291949A2FA00790FDF /* SplusDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A98281949A2FA00790FDF /* SplusDemoTests.m */; };
 		E23C207319515ED100EC4F37 /* DemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E23C207219515ED100EC4F37 /* DemoTest.m */; };
-		E2AD7B4D199267FB0017A92B /* SplusLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */; };
 		E2AD7BB6199267FB0017A92B /* Alixpay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2AD7BA1199267FB0017A92B /* Alixpay.bundle */; };
 		E2AD7BC1199267FB0017A92B /* PPImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2AD7BB4199267FB0017A92B /* PPImage.bundle */; };
 		E2AD7BC3199267FB0017A92B /* PPAppPlatformKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BC2199267FB0017A92B /* PPAppPlatformKit.framework */; };
@@ -37,6 +36,7 @@
 		E2AD7BD5199267FB0017A92B /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BB2199267FB0017A92B /* libssl.a */; };
 		E2AD7BD6199267FB0017A92B /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BB3199267FB0017A92B /* libUPPayPlugin.a */; };
 		E2AD7BDA199267FB0017A92B /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AD7BD9199267FB0017A92B /* libstdc++.6.dylib */; };
+		E2B3C63019ED147E00CD5CBE /* SplusLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B3C62F19ED147E00CD5CBE /* SplusLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,6 @@
 		E23A98281949A2FA00790FDF /* SplusDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplusDemoTests.m; sourceTree = "<group>"; };
 		E23C207119515ED100EC4F37 /* DemoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTest.h; sourceTree = "<group>"; };
 		E23C207219515ED100EC4F37 /* DemoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTest.m; sourceTree = "<group>"; };
-		E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
 		E2AD7BA0199267FB0017A92B /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
 		E2AD7BA1199267FB0017A92B /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Alixpay.bundle; sourceTree = "<group>"; };
 		E2AD7BA2199267FB0017A92B /* AlixPaylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlixPaylib.a; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		E2AD7BD7199267FB0017A92B /* Alixpay.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Alixpay.bundle; path = ../include/Alixpay.bundle; sourceTree = "<group>"; };
 		E2AD7BD8199267FB0017A92B /* PPImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PPImage.bundle; path = ../include/PPImage.bundle; sourceTree = "<group>"; };
 		E2AD7BD9199267FB0017A92B /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		E2B3C62F19ED147E00CD5CBE /* SplusLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SplusLibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos/SplusLibrary.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +104,13 @@
 				E2AD7BCF199267FB0017A92B /* QuartzCore.framework in Frameworks */,
 				E2AD7BCD199267FB0017A92B /* AdSupport.framework in Frameworks */,
 				E2AD7BCB199267FB0017A92B /* CFNetwork.framework in Frameworks */,
+				E2B3C63019ED147E00CD5CBE /* SplusLibrary.framework in Frameworks */,
 				E2AD7BC9199267FB0017A92B /* SystemConfiguration.framework in Frameworks */,
 				E2AD7BC7199267FB0017A92B /* libMobileGestalt.dylib in Frameworks */,
 				E2AD7BC5199267FB0017A92B /* CoreFoundation.framework in Frameworks */,
 				E23A98061949A2FA00790FDF /* CoreGraphics.framework in Frameworks */,
 				E2AD7BC3199267FB0017A92B /* PPAppPlatformKit.framework in Frameworks */,
 				E23A98081949A2FA00790FDF /* UIKit.framework in Frameworks */,
-				E2AD7B4D199267FB0017A92B /* SplusLibrary.framework in Frameworks */,
 				E23A98041949A2FA00790FDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,9 +159,9 @@
 				E2AD7BCA199267FB0017A92B /* CFNetwork.framework */,
 				E2AD7BC8199267FB0017A92B /* SystemConfiguration.framework */,
 				E2AD7BC6199267FB0017A92B /* libMobileGestalt.dylib */,
+				E2B3C62F19ED147E00CD5CBE /* SplusLibrary.framework */,
 				E2AD7BC4199267FB0017A92B /* CoreFoundation.framework */,
 				E2AD7BC2199267FB0017A92B /* PPAppPlatformKit.framework */,
-				E2AD7B4C199267FB0017A92B /* SplusLibrary.framework */,
 				E23A98031949A2FA00790FDF /* Foundation.framework */,
 				E23A98051949A2FA00790FDF /* CoreGraphics.framework */,
 				E23A98071949A2FA00790FDF /* UIKit.framework */,
@@ -463,6 +463,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos",
 					/Users/ch/Desktop/Multi_Platform/PP,
 					/Users/ch/Desktop/Multi_Platform/PP/SplusPlatFramework/..,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Release-iphoneos",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -508,6 +509,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Debug-iphoneos",
 					/Users/ch/Desktop/Multi_Platform/PP,
 					/Users/ch/Desktop/Multi_Platform/PP/SplusPlatFramework/..,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PPtoSplus-ctvndglaisyzwhaeyndthdjyucap/Build/Products/Release-iphoneos",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

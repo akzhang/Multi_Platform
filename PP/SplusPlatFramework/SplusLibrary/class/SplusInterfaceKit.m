@@ -255,30 +255,32 @@ __strong static SplusInterfaceKit *singleton = nil;
 //pay
 //关闭客户端页面回调方法
 -(void)ppClosePageViewCallBack:(PPPageCode)paramPPPageCode{
-    if (paramPPPageCode == 1) {
-        _loginPageCode = @"1";
-    }else if (paramPPPageCode == 2){
-        _loginPageCode = @"2";
-    }else if (paramPPPageCode == 3){
-        _loginPageCode = @"3";
-    }
-    
-    [_delegate SplusLeavedLogin:_loginPageCode];
+//    if (paramPPPageCode == 1) {
+//        _loginPageCode = @"1";
+//    }else if (paramPPPageCode == 2){
+//        _loginPageCode = @"2";
+//    }else if (paramPPPageCode == 3){
+//        _loginPageCode = @"3";
+//    }
+//    
+//    [_delegate SplusLeavedLogin:_loginPageCode];
+    [_delegate SplusLeavedAcount];
 }
 
 
 
 //关闭WEB页面回调方法
 - (void)ppCloseWebViewCallBack:(PPWebViewCode)paramPPWebViewCode{
-    if (paramPPWebViewCode == 1) {
-        _payPageCode = @"1";
-    }else if (paramPPWebViewCode == 2){
-        _payPageCode = @"2";
-    }else if (paramPPWebViewCode == 3){
-        _payPageCode = @"3";
-    }
-    
-    [_delegate SplusLeavedWeb:_loginPageCode];
+//    if (paramPPWebViewCode == 1) {
+//        _payPageCode = @"1";
+//    }else if (paramPPWebViewCode == 2){
+//        _payPageCode = @"2";
+//    }else if (paramPPWebViewCode == 3){
+//        _payPageCode = @"3";
+//    }
+//    
+//    [_delegate SplusLeavedWeb:_loginPageCode];
+    [_delegate SplusLeavedPay:@"2"];
 }
 
 //注销回调方法
@@ -292,9 +294,9 @@ __strong static SplusInterfaceKit *singleton = nil;
     //回调购买成功。其余都是失败
     if(paramPPPayResultCode == PPPayResultCodeSucceed){
         //购买成功发放道具
-         [_delegate SplusPayOnSuccess:[OrderInfo sharedSingleton]];
+         [_delegate SplusLeavedPay:@"0"];
     }else{
-        [_delegate SplusPayOnFailure];//支付失败回调
+        [_delegate SplusLeavedPay:@"1"];
     }
 }
 

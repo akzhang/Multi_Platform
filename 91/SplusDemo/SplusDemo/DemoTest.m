@@ -246,19 +246,21 @@
 }
 
 /**
- *  从登录页面离开回调
- */
--(void)SplusLeavedLogin
-{
-    [self showMessage:@"从登录界面离开,回到游戏"];
-}
-
-/**
  *  从支付界面离开回调
  */
 -(void)SplusLeavedPay:(id)sender
 {
-    [self showMessage:@"从支付界面离开"];
+    int resultCode = [sender intValue];
+    if (resultCode == 0) {
+        [self showMessage:@"支付成功"];
+    }else if(resultCode == 1)
+    {
+        [self showMessage:@"支付失败"];
+    }else
+    {
+        [self showMessage:@"关闭支付界面"];
+    }
+    
 }
 
 //暂停页回调

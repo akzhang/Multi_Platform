@@ -239,36 +239,20 @@
     [self showMessage:@"从个人中心离开,回到游戏"];
 }
 
-//从登录页面离开
--(void)SplusLeavedLogin
-{
-    [self showMessage:@"从登录界面离开,回到游戏"];
-}
-
 //从支付界面离开
 -(void)SplusLeavedPay:(id)sender
 {
-    NSString *payResult = sender;
-    NSLog(@"payResult = %@", payResult);
-    int result = [payResult intValue];
-    if (result == 3) {
+    int resultCode = [sender intValue];
+    NSLog(@"resultCode = %d", resultCode);
+    if (resultCode == 0) {
         [self showMessage:@"支付成功"];
-        return;
-    }else if(result == 2)
+    }else if(resultCode == 1)
     {
         [self showMessage:@"支付失败"];
-        return;
-    }else if(result == 1)
+    }else
     {
-        [self showMessage:@"充值中"];
-        return;
-    }else if(result == 0)
-    {
-        [self showMessage:@"待支付"];
-        return;
+        [self showMessage:@"关闭支付界面"];
     }
-    
-    
 }
 
 -(void)showMessage:(NSString*)msg

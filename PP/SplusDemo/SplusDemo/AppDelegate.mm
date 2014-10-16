@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <SplusIosSdk/SplusInterfaceKit.h>
 #import <PPAppPlatformKit/PPAppPlatformKit.h>
 
 @implementation AppDelegate
@@ -52,7 +51,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    [[SplusInterfaceKit sharedInstance] alixPayResult:url];
+
 	return YES;
 }
 
