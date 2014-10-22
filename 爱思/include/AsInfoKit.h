@@ -21,8 +21,15 @@
 @property (nonatomic, retain) UIViewController *rootViewController; //-NSLog-2014-06-23-STM-指向根视图
 //-SDK 1.5 - 新增的属性
 @property (nonatomic, assign) BOOL       isHiddenCloseButtonOnAsLoginView; //-NSLog-2014-07-07-STM-是否屏蔽登录窗口右上角的 “X” 按钮
-@property (nonatomic, assign) BOOL       isEnableChargeButtonOnAsCenterView; //-NSLog-2014-07-07-STM-是否禁用户中心的充值按钮
-
+//-SDK 1.5.2 - 新增的属性
+/*
+ * orientationOfGame 游戏支持的方向 :
+ * UIInterfaceOrientationMaskPortrait : 正立
+ * UIInterfaceOrientationMaskLandscapeLeft : 左横屏
+ * UIInterfaceOrientationMaskLandscapeRight : 右横屏
+ * UIInterfaceOrientationMaskLandscape : 横屏（可上下翻转）
+ */
+@property (nonatomic, assign) UIInterfaceOrientationMask       orientationOfGame; //-NSLog-2014-10-14-STM-游戏支持的方向
 
 + (AsInfoKit *)sharedInstance;
 

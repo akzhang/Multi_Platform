@@ -159,6 +159,73 @@ __strong static SplusInterfaceKit *singleton = nil;
 
 #pragma mark    ---------------SDK CALLBACK---------------
 ////字符串登录成功回调【实现其中一个就可以】
+//-SDK 1.5.2 - 新增的支付宝支付的回调
+- (void)asAlixPayResultCallBack:(int)statusCode
+{
+    //    * 9000     订单支付成功
+    //    * 8000     正在处理
+    //    * 4000     订单支付失败
+    //    * 6001     用户中途取消
+    //    * 6002     网络连接出错
+    
+    switch (statusCode) {
+        case 9000:
+            NSLog(@"支付宝的回调 - 订单支付成功 : %d", statusCode);
+            _payPageCode = @"0";
+            [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+            break;
+        case 8000:
+            NSLog(@"支付宝的回调 - 正在处理 : %d", statusCode);
+            _payPageCode = @"1";
+            [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+            break;
+        case 4000:
+            NSLog(@"支付宝的回调 - 订单支付失败 : %d", statusCode);
+            _payPageCode = @"1";
+            [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+            break;
+        case 6001:
+            NSLog(@"支付宝的回调 - 用户中途取消 : %d", statusCode);
+            _payPageCode = @"2";
+            [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+            break;
+        case 6002:
+            NSLog(@"支付宝的回调 - 网络连接出错 : %d", statusCode);
+            _payPageCode = @"1";
+            [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+            break;
+        default:
+            break;
+    }
+}
+
+
+//-SDK 1.5.2 - 新增的银联支付的回调
+- (void)asUPPayPluginResultCallBack:(NSString *)result
+{
+    //    * success  支付成功
+    //    * fail     支付失败
+    //    * cancel   用户取消支付
+    if ([result isEqualToString:@"success"]) {
+        NSLog(@"银联支付的回调 - 支付成功 : %@", result);
+        _payPageCode = @"0";
+        [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+    }
+    if ([result isEqualToString:@"fail"]) {
+        NSLog(@"银联支付的回调 - 支付失败 : %@", result);
+        _payPageCode = @"1";
+        [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+    }
+    if ([result isEqualToString:@"cancel"]){
+        NSLog(@"银联支付的回调 - 用户取消支付 : %@", result);
+        _payPageCode = @"2";
+        [_delegate SplusLeavedPay:_payPageCode];//支付结果回调
+    }
+    
+}
+
+
+
 
 //-SDK 1.4.1 - 新增的关闭用户中心回调
 - (void)asClosedCenterViewCallBack

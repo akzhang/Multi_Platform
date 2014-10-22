@@ -76,6 +76,30 @@ typedef enum{
 @protocol AsPlatformSDKDelegate <NSObject>
 @required
 
+//-SDK 1.5.2 - 新增的支付宝app支付的结果回调
+/**
+ * @brief   支付宝app的支付结果回调
+ * @param   INPUT   statusCode       接口返回的结果编码
+ * 9000     订单支付成功
+ * 8000     正在处理
+ * 4000     订单支付失败
+ * 6001     用户中途取消
+ * 6002     网络连接出错
+ * @return  无返回
+ */
+- (void)asAlixPayResultCallBack:(int)statusCode;
+
+//-SDK 1.5.2 - 新增的银联sdk支付的结果回调
+/**
+ * @brief   银联sdk的支付结果回调
+ * @param   INPUT   result       接口返回的结果
+ * success  支付成功
+ * fail     支付失败
+ * cancel   用户取消支付。
+ * @return  无返回
+ */
+- (void)asUPPayPluginResultCallBack:(NSString *)result;
+
 //-SDK 1.4.1 - 新增的关闭用户中心回调
 /**
  * @brief   关闭用户中心的回调
@@ -119,10 +143,10 @@ typedef enum{
 
 /**
  * @brief   关闭SDK客户端页面后的回调
- * @param   INPUT   paramAsPageCode       接口返回的页面编码
+ * @param   INPUT   paramPageCode       接口返回的页面编码
  * @return  无返回
  */
-- (void)asClosePageViewCallBack:(AsPageCode)paramPPPageCode;
+- (void)asClosePageViewCallBack:(AsPageCode)paramPageCode;
 
 
 /**
