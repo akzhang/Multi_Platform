@@ -113,5 +113,20 @@
  */
 -(void)splusQuotaPay:(NSString*)money Type:(NSString*)mType serverID:(NSString*)serverid serverName:(NSString*)serverName RoleId:(NSString*)roleld RoleName:(NSString*)roleName OutOrderId:(NSString*)mOutOrderid Pext:(NSString*)mPext;
 
+/**
+ *  open url
+ *
+ *  @param serverid    url
+ */
+-(void)splusOpenUrl:(NSURL*)url;
+
+/**
+ *  handle url
+ *
+ *  @param serverid    url
+ *  @param sourceApplication
+ */
+-(void)splusHandleOpenUrl:(NSURL*)url SourceApplication:(NSString*)sourceApplication;
+
 
 @end

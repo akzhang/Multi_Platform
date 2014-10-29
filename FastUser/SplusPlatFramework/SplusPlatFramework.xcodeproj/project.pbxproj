@@ -11,10 +11,6 @@
 		E2467D711980D62A0099E181 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2467D6F1980D62A0099E181 /* InfoPlist.strings */; };
 		E2467D7E1980D8CC0099E181 /* SplusInterfaceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D7C1980D8CC0099E181 /* SplusInterfaceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2467D801980D9290099E181 /* SplusInterfaceKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D7D1980D8CC0099E181 /* SplusInterfaceKit.m */; };
-		E2467DD01980DD5F0099E181 /* Activate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D821980DD5E0099E181 /* Activate.h */; };
-		E2467DD11980DD5F0099E181 /* Activate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D831980DD5E0099E181 /* Activate.m */; };
-		E2467DD21980DD5F0099E181 /* ActivateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D841980DD5E0099E181 /* ActivateInfo.h */; };
-		E2467DD31980DD5F0099E181 /* ActivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D851980DD5E0099E181 /* ActivateInfo.m */; };
 		E2467DD41980DD5F0099E181 /* HttpUrl.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D871980DD5E0099E181 /* HttpUrl.h */; };
 		E2467DD51980DD5F0099E181 /* AppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E2467D891980DD5E0099E181 /* AppInfo.h */; };
 		E2467DD61980DD5F0099E181 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2467D8A1980DD5E0099E181 /* AppInfo.m */; };
@@ -73,6 +69,10 @@
 		E2AD741F199B52620058EA63 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AD741C199B52620058EA63 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E2AD7420199B52620058EA63 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E2AD741D199B52620058EA63 /* GTMDefines.h */; };
 		E2AFB93519D937080035086E /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AFB93419D937080035086E /* AlipaySDK.framework */; };
+		E2B1518819FF724900DB820A /* Activate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B1518419FF724900DB820A /* Activate.h */; };
+		E2B1518919FF724900DB820A /* Activate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B1518519FF724900DB820A /* Activate.m */; };
+		E2B1518A19FF724900DB820A /* ActivateInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B1518619FF724900DB820A /* ActivateInfo.h */; };
+		E2B1518B19FF724900DB820A /* ActivateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B1518719FF724900DB820A /* ActivateInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,10 +84,6 @@
 		E2467D721980D62A0099E181 /* SplusLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SplusLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		E2467D7C1980D8CC0099E181 /* SplusInterfaceKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplusInterfaceKit.h; sourceTree = "<group>"; };
 		E2467D7D1980D8CC0099E181 /* SplusInterfaceKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplusInterfaceKit.m; sourceTree = "<group>"; };
-		E2467D821980DD5E0099E181 /* Activate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activate.h; sourceTree = "<group>"; };
-		E2467D831980DD5E0099E181 /* Activate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activate.m; sourceTree = "<group>"; };
-		E2467D841980DD5E0099E181 /* ActivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivateInfo.h; sourceTree = "<group>"; };
-		E2467D851980DD5E0099E181 /* ActivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivateInfo.m; sourceTree = "<group>"; };
 		E2467D871980DD5E0099E181 /* HttpUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUrl.h; sourceTree = "<group>"; };
 		E2467D891980DD5E0099E181 /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
 		E2467D8A1980DD5E0099E181 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
@@ -146,6 +142,10 @@
 		E2AD741C199B52620058EA63 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = ../../../SplusDemo/GTMBase64.m; sourceTree = "<group>"; };
 		E2AD741D199B52620058EA63 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = ../../../SplusDemo/GTMDefines.h; sourceTree = "<group>"; };
 		E2AFB93419D937080035086E /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = ../SplusDemo/AlipaySDK.framework; sourceTree = "<group>"; };
+		E2B1518419FF724900DB820A /* Activate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activate.h; sourceTree = "<group>"; };
+		E2B1518519FF724900DB820A /* Activate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activate.m; sourceTree = "<group>"; };
+		E2B1518619FF724900DB820A /* ActivateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivateInfo.h; sourceTree = "<group>"; };
+		E2B1518719FF724900DB820A /* ActivateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivateInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +214,8 @@
 		E2467D771980D76D0099E181 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				E2B1518319FF724900DB820A /* Activate */,
 				E2A9289419D503A700E780CF /* UDID_Tools */,
-				E2467D811980DD5E0099E181 /* Activate */,
 				E2467D861980DD5E0099E181 /* Address */,
 				E2467D881980DD5E0099E181 /* AppInfo */,
 				E2467D8F1980DD5E0099E181 /* DeviceInfo */,
@@ -235,17 +235,6 @@
 				E2AD741D199B52620058EA63 /* GTMDefines.h */,
 			);
 			path = class;
-			sourceTree = "<group>";
-		};
-		E2467D811980DD5E0099E181 /* Activate */ = {
-			isa = PBXGroup;
-			children = (
-				E2467D821980DD5E0099E181 /* Activate.h */,
-				E2467D831980DD5E0099E181 /* Activate.m */,
-				E2467D841980DD5E0099E181 /* ActivateInfo.h */,
-				E2467D851980DD5E0099E181 /* ActivateInfo.m */,
-			);
-			path = Activate;
 			sourceTree = "<group>";
 		};
 		E2467D861980DD5E0099E181 /* Address */ = {
@@ -367,6 +356,17 @@
 			path = UDID_Tools;
 			sourceTree = "<group>";
 		};
+		E2B1518319FF724900DB820A /* Activate */ = {
+			isa = PBXGroup;
+			children = (
+				E2B1518419FF724900DB820A /* Activate.h */,
+				E2B1518519FF724900DB820A /* Activate.m */,
+				E2B1518619FF724900DB820A /* ActivateInfo.h */,
+				E2B1518719FF724900DB820A /* ActivateInfo.m */,
+			);
+			path = Activate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -384,13 +384,14 @@
 				E2467E131980DD5F0099E181 /* UserData.h in Headers */,
 				E2467DE61980DD5F0099E181 /* NSString+SBJSON.h in Headers */,
 				E2467DE11980DD5F0099E181 /* JSON.h in Headers */,
+				E2B1518819FF724900DB820A /* Activate.h in Headers */,
 				E2467DE41980DD5F0099E181 /* NSObject+SBJSON.h in Headers */,
 				E2AD741A199B37450058EA63 /* KYSDK.h in Headers */,
-				E2467DD21980DD5F0099E181 /* ActivateInfo.h in Headers */,
 				E2467E0D1980DD5F0099E181 /* httpRequest.h in Headers */,
 				E2467DEE1980DD5F0099E181 /* SBJsonWriter.h in Headers */,
 				E2467DEC1980DD5F0099E181 /* SBJsonStreamWriter.h in Headers */,
 				E2AD741E199B52620058EA63 /* GTMBase64.h in Headers */,
+				E2B1518A19FF724900DB820A /* ActivateInfo.h in Headers */,
 				E2467D7E1980D8CC0099E181 /* SplusInterfaceKit.h in Headers */,
 				E2467DD71980DD5F0099E181 /* OrderInfo.h in Headers */,
 				E2467E031980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.h in Headers */,
@@ -404,7 +405,6 @@
 				E2467DE81980DD5F0099E181 /* SBJsonBase.h in Headers */,
 				E2467E111980DD5F0099E181 /* SplusImage.h in Headers */,
 				E2467E051980DD5F0099E181 /* NSString+dataFromHexString.h in Headers */,
-				E2467DD01980DD5F0099E181 /* Activate.h in Headers */,
 				E2467E0F1980DD5F0099E181 /* NSDictionary+QueryBuilder.h in Headers */,
 				E2467E0B1980DD5F0099E181 /* GetImage.h in Headers */,
 				E2467DDF1980DD5F0099E181 /* Reachability.h in Headers */,
@@ -477,12 +477,12 @@
 				E2467DF41980DD5F0099E181 /* MyMD5.m in Sources */,
 				E2467E121980DD5F0099E181 /* SplusImage.m in Sources */,
 				E2467DDA1980DD5F0099E181 /* SplusUser.m in Sources */,
-				E2467DD11980DD5F0099E181 /* Activate.m in Sources */,
 				E2467DD61980DD5F0099E181 /* AppInfo.m in Sources */,
 				E2467DE91980DD5F0099E181 /* SBJsonBase.m in Sources */,
 				E2467E041980DD5F0099E181 /* NSData+hexRepresentationWithSpaces_AS.m in Sources */,
 				E2467E141980DD5F0099E181 /* UserData.m in Sources */,
 				E2467DEF1980DD5F0099E181 /* SBJsonWriter.m in Sources */,
+				E2B1518919FF724900DB820A /* Activate.m in Sources */,
 				E2467DDC1980DD5F0099E181 /* checkWifi.m in Sources */,
 				E2467DF21980DD5F0099E181 /* MBProgressHUD.m in Sources */,
 				E2467E0C1980DD5F0099E181 /* GetImage.m in Sources */,
@@ -490,7 +490,6 @@
 				E2467E061980DD5F0099E181 /* NSString+dataFromHexString.m in Sources */,
 				E2467DE51980DD5F0099E181 /* NSObject+SBJSON.m in Sources */,
 				E2467DEB1980DD5F0099E181 /* SBJsonParser.m in Sources */,
-				E2467DD31980DD5F0099E181 /* ActivateInfo.m in Sources */,
 				E2467DDE1980DD5F0099E181 /* qqMac.m in Sources */,
 				E2467D801980D9290099E181 /* SplusInterfaceKit.m in Sources */,
 				E2467DE01980DD5F0099E181 /* Reachability.m in Sources */,
@@ -500,6 +499,7 @@
 				E2467E101980DD5F0099E181 /* NSDictionary+QueryBuilder.m in Sources */,
 				E2AD741F199B52620058EA63 /* GTMBase64.m in Sources */,
 				E2467DD81980DD5F0099E181 /* OrderInfo.m in Sources */,
+				E2B1518B19FF724900DB820A /* ActivateInfo.m in Sources */,
 				E2467E0E1980DD5F0099E181 /* httpRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,10 +24,9 @@
     return YES;
 }
 
-//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-//    [[SplusInterfaceKit sharedInstance] alixPayResult:url];
-//	return YES;
-//}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+	return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

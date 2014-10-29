@@ -16,7 +16,8 @@
 @property(nonatomic, strong)NSString *passwd;
 @property(nonatomic, strong)NSString *sessionID;
 @property(nonatomic, strong)NSString *uid;
+@property(nonatomic, strong)NSString *partner_uid;
 
--(void)initWithType:(NSString*)splusName Pwd:(NSString*)splusPwd Sessiond:(NSString*)splusSessiond Uid:(NSString*)splusUid;
+-(void)initWithType:(NSString*)splusName Pwd:(NSString*)splusPwd Sessiond:(NSString*)splusSessiond Uid:(NSString*)splusUid PartnerUid:(NSString*)partnerUid;
 
 @end

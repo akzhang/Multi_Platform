@@ -116,7 +116,20 @@
  */
 -(void)setPlayerInfo:(NSString*)serverid serverName:(NSString*)serverName RoleId:(NSString*)roleld RoleName:(NSString*)roleName OutOrderId:(NSString*)mOutOrderid Pext:(NSString*)mPext;
 
+/**
+ *  open url
+ *
+ *  @param serverid    url
+ */
+-(void)splusOpenUrl:(NSString*)url;
 
+/**
+ *  handle url
+ *
+ *  @param serverid    url
+ *  @param sourceApplication
+ */
+-(void)splusHandleOpenUrl:(NSString*)url SourceApplication:(NSString*)sourceApplication;
 
 @end
 

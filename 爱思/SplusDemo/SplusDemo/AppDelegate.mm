@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "AsInfoKit.h"
 #include "AsPlatformSDK.h"
-#import <SplusIosSdk/SplusInterfaceKit.h>
+#include <SplusLibrary/SplusInterfaceKit.h>
 
 @implementation AppDelegate
 
@@ -47,24 +47,23 @@
 
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    
-    if ([sourceApplication isEqualToString:@"com.alipay.iphoneclient"])
-    {
-        [[AsInfoKit sharedInstance] alixPayResult:url];
-    }
-    else if ([sourceApplication isEqualToString:@"com.alipay.safepayclient"])
-    {
-        [[AsInfoKit sharedInstance] alixPayResult:url];
-    }
-    else if ([sourceApplication isEqualToString:@"com.tencent.xin"])
-    {
-        [[AsInfoKit sharedInstance] weChatPayResult:url];
-    }
+    [[SplusInterfaceKit sharedInstance] splusHandleOpenUrl:url SourceApplication:sourceApplication];
+//    if ([sourceApplication isEqualToString:@"com.alipay.iphoneclient"])
+//    {
+//        [[AsInfoKit sharedInstance] alixPayResult:url];
+//    }
+//    else if ([sourceApplication isEqualToString:@"com.alipay.safepayclient"])
+//    {
+//        [[AsInfoKit sharedInstance] alixPayResult:url];
+//    }
+//    else if ([sourceApplication isEqualToString:@"com.tencent.xin"])
+//    {
+//        [[AsInfoKit sharedInstance] weChatPayResult:url];
+//    }
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    [[SplusInterfaceKit sharedInstance] alixPayResult:url];
 	return YES;
 }
 

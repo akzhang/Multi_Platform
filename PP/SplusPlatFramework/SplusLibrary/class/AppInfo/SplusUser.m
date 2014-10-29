@@ -22,12 +22,13 @@
     return sharedSingleton;
 }
 
--(void)initWithType:(NSString*)splusName Pwd:(NSString*)splusPwd Sessiond:(NSString*)splusSessiond Uid:(NSString*)splusUid
+-(void)initWithType:(NSString*)splusName Pwd:(NSString*)splusPwd Sessiond:(NSString*)splusSessiond Uid:(NSString*)splusUid PartnerUid:(NSString*)partnerUid
 {
     _username = splusName;
     _passwd = splusPwd;
     _uid = splusUid;
     _sessionID = splusSessiond;
+    _partner_uid = partnerUid;
 }
 
 @end

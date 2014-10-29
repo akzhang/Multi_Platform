@@ -5,7 +5,7 @@
 //  Created by YLo. on 13-12-5.
 //  Copyright (c) 2013年 tongbu.com. All rights reserved.
 //
-//  SDK Version : 3.2.2
+//  SDK Version : 3.3.0
 
 #import <UIKit/UIKit.h>
 #import "TBPlatformDefines.h"
@@ -39,7 +39,7 @@
 - (void)TBSetShowSDKLog:(BOOL)isShow;
 
 /**
- *  @brief 设置是否自动旋转。
+ *  设置是否自动旋转。
  *
  *  @note
  *
@@ -52,9 +52,9 @@
 - (void)TBSetAutoRotation:(BOOL)isAutoRotate;
 
 /**
- *	@brief	打开检查更新调试模式（提测前请注释该方法）
- *          打开调试模式后，平台检查更新默认会返回有更新；
- *          返回的更新是否强制，由开发商在dev.tongbu.com/game设置
+ *	打开检查更新调试模式（提测前请注释该方法）
+ *  打开调试模式后，平台检查更新默认会返回有更新；
+ *  返回的更新是否强制，由开发商在dev.tongbu.com/game设置
  *
  *	@param 	nFlag 	预留，0
  */
@@ -68,6 +68,13 @@
  */
 - (void)TBSetWelcomeTipShow:(BOOL)isShow;
 
+/**
+ *  设置是否使用旧的Loading方式（充值相关Loading）
+ *
+ *  @param isUseOldMode 是否使用（默认为NO）
+ */
+- (void)TBSetUseOldLoadingMode:(BOOL)isUseOldMode;
+
 @end
 
 #pragma mark - 平台初始化 *******************************************************
@@ -75,7 +82,7 @@
 @interface TBPlatform(Init)
 
 /**
- *	平台初始化方法
+ *	平台初始化方法（!初始化为异步操作，请在收到初始化通知后继续后续操作!）
  *
  *	@param	appid       游戏ID
  *
@@ -89,7 +96,7 @@
 isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 
 /**
- *  @brief 获取appId，需要预先设置
+ *  获取appId，需要预先设置
  */
 - (int)appId;
 
@@ -100,12 +107,12 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 @interface TBPlatform(UserAccountManager)
 
 /**
- * 判断玩家是否已经登录平台
+ *  判断玩家是否已经登录平台
  */
 - (BOOL)TBIsLogined;
 
 /**
- *  @brief 注册界面入口
+ *  注册界面入口
  *
  *  @param nFlag 标识（按位标识）预留，默认为0
  *
@@ -114,7 +121,7 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 - (int)TBRegister:(int) nFlag;
 
 /**
- *  @brief 登录平台,进入登录或者注册界面入口
+ *  登录平台,进入登录或者注册界面入口
  *
  *  @param nFlag 标识（按位标识）预留，默认为0
  *
@@ -132,7 +139,7 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 - (int)TBLogout:(int) nFlag;
 
 /**
- *  @brief 切换账号（logout+login），会注销当前登录的账号，取消自动登录。
+ *  切换账号（logout+login），会注销当前登录的账号，取消自动登录。
  */
 - (void)TBSwitchAccount;
 
@@ -163,7 +170,7 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 @interface TBPlatform(UserInformation)
 
 /**
- *  @brief  获取登录帐户的信息
+ *  获取登录帐户的信息
  *
  *  @result 当前登录帐户的信息，包含用户ID，昵称等。
  *
@@ -172,17 +179,17 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 - (TBPlatformUserInfo *)TBGetMyInfo;
 
 /**
- *  @brief 获取本次登录的sessionId，需要登录后才能获取(时效2分钟)
+ *  获取本次登录的sessionId，需要登录后才能获取(时效2分钟)
  */
 - (NSString *)sessionID;
 
 /**
- *  @brief 获取登录后的昵称
+ *  获取登录后的昵称
  */
 - (NSString *)nickName;
 
 /**
- *	@brief	获取用户ID（唯一标识）
+ *	获取用户ID（唯一标识）
  */
 - (NSString *)userID;
 
@@ -193,13 +200,13 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 @interface TBPlatform(Payment)
 
 /**
- *  @brief 进行虚拟币充值或商品购买（需登录，同步后台记录充值账号记录）
+ *  进行虚拟币充值或商品购买（需登录，同步后台记录充值账号记录）
  *
  *  @param orderSerial     合作商订单号，必须保证唯一，双方对帐的唯一标记(最大长度255)
  *
  *  @param needPayRMB      需要支付的金额，单位：元（大于0，否则进入自选金额界面）
  *
- *  @param payDescription  支付描述，发送支付成功通知时，返回给开发者(最大长度255)
+ *  @param payDescription  支付描述，发送支付成功通知时，返回给开发者(不能包含中文，最大长度255)
  *
  *  @param delegate        回调对象，见TBBuyGoodsProtocol协议
  *
@@ -211,11 +218,11 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
               delegate:(id<TBBuyGoodsProtocol>)buyDelegate;
 
 /**
- *  @brief 进行充值。该接口直接进入Web页充值，无回调，开发者可以使用TBCheckPaySuccess:delegate:接口进行订单查询
+ *  进行充值。该接口直接进入Web页充值，无回调，开发者可以使用TBCheckPaySuccess:delegate:接口进行订单查询
  *
  *  @param orderSerial     合作商订单号，必须保证唯一，双方对帐的唯一标记(最大长度255)
  *
- *  @param payDescription  支付描述，发送支付成功通知时，返回给开发者
+ *  @param payDescription  支付描述，发送支付成功通知时，返回给开发者(不能包含中文，最大长度255)
  *
  *  @result 错误码
  */
@@ -223,7 +230,7 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
         payDescription:(NSString*)payDescription;
 
 /**
- *  @brief 查询支付是成功
+ *  查询支付是成功
  *
  *  @param strCooOrderSerial	支付订单号
  *
@@ -240,28 +247,28 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 @interface TBPlatform (Center)
 
 /**
- *	@brief	进入用户中心
+ *	进入用户中心
  *
  *	@param 	nFlag 	预留，默认为0
  */
 - (void)TBEnterUserCenter:(int)nFlag;
 
 /**
- *  @brief 进入游戏大厅
+ *  进入游戏大厅
  *
  *  @param nFlag 预留，默认为0。
  */
 - (void)TBEnterAppCenter:(int) nFlag;
 
 /**
- *  @brief 进入短信箱
+ *  进入短信箱
  *
  *  @param nFlag 预留，默认为0。
  */
 - (void)TBEnterUserMessageBox:(int)nFlag;
 
 /**
- *  @brief  进入应用论坛 （论坛需要找同步商务配置，具体联系接入专员）
+ *  进入应用论坛 （论坛需要找同步商务配置，具体联系接入专员）
  *
  *  @param  nFlag 预留，目前传0即可
  *
@@ -284,7 +291,7 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 - (void)TBHandleOpenURL:(NSURL *)url DEPRECATED(3_2_2);
 
 /**
- *  @brief 设置应用Id
+ *  设置应用Id
  *
  *  @deprecated 使用 -TBInitPlatformWithAppID:screenOrientation:isContinueWhenCheckUpdateFailed:
  *
@@ -293,7 +300,7 @@ isContinueWhenCheckUpdateFailed:(BOOL)isAccept;
 - (BOOL)setAppId:(int)appId DEPRECATED(3_2_2);
 
 /**
- *  @brief 设定平台初始方向
+ *  设定平台初始方向
  *
  *  @deprecated 使用 -TBInitPlatformWithAppID:screenOrientation:isContinueWhenCheckUpdateFailed:
  */

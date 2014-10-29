@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "434711952.087214"
+            timestampString = "436171483.34969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-alipayCallBack:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "434711952.087214"
+            timestampString = "436171483.34969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
-            landmarkName = "-UPPayPluginResult:"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "-logSendSMSCallback:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

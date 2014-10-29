@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "434541589.225726"
+            timestampString = "436172101.424144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-setDelegate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "434622220.971982"
+            timestampString = "436172101.424144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-splusLogin"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "435650837.193962"
+            timestampString = "436172101.424144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "-loginSplusCallback:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "435650837.193962"
+            timestampString = "436172101.424144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
             landmarkName = "-loginSplusCallback:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "435650837.193962"
+            timestampString = "436172101.424144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "-loginSplusCallback:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,43 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "435650837.193962"
+            timestampString = "436172101.424144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "367"
-            endingLineNumber = "367"
-            landmarkName = "-logion_callback:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "435650837.193962"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351"
-            landmarkName = "-loginSplusCallback:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SplusPlatFramework/SplusLibrary/class/SplusInterfaceKit.m"
-            timestampString = "435650837.193962"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
             landmarkName = "-asVerifyingUpdatePassCallBack"
             landmarkType = "5">
          </BreakpointContent>

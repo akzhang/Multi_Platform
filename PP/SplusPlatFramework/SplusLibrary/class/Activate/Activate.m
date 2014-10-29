@@ -58,7 +58,7 @@
                                 [SvUDIDTools UDID], @"imei",
                                 [NSString stringWithFormat:@"%f",SCREENWIDTH*scale_screen], @"wpixels",
                                 [NSString stringWithFormat:@"%f",SCREENHEIGHT*scale_screen], @"hpixels",
-                                [UIDevice currentDevice].model, @"mode",
+                                [SvUDIDTools deviceName], @"mode",
                                 [[UIDevice currentDevice] systemName], @"os",
                                 [[UIDevice currentDevice] systemVersion], @"osver",
                                 [[AppInfo sharedSingleton] getData], @"time",

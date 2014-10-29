@@ -353,99 +353,61 @@ static const char kKeyChainUDIDAccessGroup[] = "YOURAPPID.com.cnblogs.smileEvday
 + (NSString*)deviceName
 {
     struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     
-    NSArray *modelArray = @[
-                            
-                            @"i386", @"x86_64",
-                            
-                            @"iPhone1,1",
-                            @"iPhone1,2",
-                            @"iPhone2,1",
-                            @"iPhone3,1",
-                            @"iPhone3,2",
-                            @"iPhone3,3",
-                            @"iPhone4,1",
-                            @"iPhone5,1",
-                            @"iPhone5,2",
-                            @"iPhone5,3",
-                            @"iPhone5,4",
-                            @"iPhone6,1",
-                            @"iPhone6,2",
-                            
-                            @"iPod1,1",
-                            @"iPod2,1",
-                            @"iPod3,1",
-                            @"iPod4,1",
-                            @"iPod5,1",
-                            
-                            @"iPad1,1",
-                            @"iPad2,1",
-                            @"iPad2,2",
-                            @"iPad2,3",
-                            @"iPad2,4",
-                            @"iPad3,1",
-                            @"iPad3,2",
-                            @"iPad3,3",
-                            @"iPad3,4",
-                            @"iPad3,5",
-                            @"iPad3,6",
-                            
-                            @"iPad2,5",
-                            @"iPad2,6",
-                            @"iPad2,7",
-                            ];
-    NSArray *modelNameArray = @[
-                                
-                                @"iPhone Simulator", @"iPhone Simulator",
-                                
-                                @"iPhone 2G",
-                                @"iPhone 3G",
-                                @"iPhone 3GS",
-                                @"iPhone 4(GSM)",
-                                @"iPhone 4(GSM Rev A)",
-                                @"iPhone 4(CDMA)",
-                                @"iPhone 4S",
-                                @"iPhone 5(GSM)",
-                                @"iPhone 5(GSM+CDMA)",
-                                @"iPhone 5c(GSM)",
-                                @"iPhone 5c(Global)",
-                                @"iphone 5s(GSM)",
-                                @"iphone 5s(Global)",
-                                
-                                @"iPod Touch 1G",
-                                @"iPod Touch 2G",
-                                @"iPod Touch 3G",
-                                @"iPod Touch 4G",
-                                @"iPod Touch 5G",
-                                
-                                @"iPad",
-                                @"iPad 2(WiFi)",
-                                @"iPad 2(GSM)",
-                                @"iPad 2(CDMA)",
-                                @"iPad 2(WiFi + New Chip)",
-                                @"iPad 3(WiFi)",
-                                @"iPad 3(GSM+CDMA)",
-                                @"iPad 3(GSM)",
-                                @"iPad 4(WiFi)",
-                                @"iPad 4(GSM)",
-                                @"iPad 4(GSM+CDMA)",
-                                
-                                @"iPad mini (WiFi)",
-                                @"iPad mini (GSM)",
-                                @"ipad mini (GSM+CDMA)"
-                                ];
-    NSInteger modelIndex = - 1;
-    NSString *modelNameString = nil;
-    modelIndex = [modelArray indexOfObject:deviceString];
-    if (modelIndex >= 0 && modelIndex < [modelNameArray count])
-    {
-        modelNameString = [modelNameArray objectAtIndex:modelIndex];
+    uname(&systemInfo);
+    
+    NSString* code = [NSString stringWithCString:systemInfo.machine
+                                        encoding:NSUTF8StringEncoding];
+    
+    static NSDictionary* deviceNamesByCode = nil;
+    
+    if (!deviceNamesByCode) {
+        
+        deviceNamesByCode = @{@"i386"      :@"Simulator",
+                              @"iPod1,1"   :@"iPod Touch",      // (Original)
+                              @"iPod2,1"   :@"iPod Touch",      // (Second Generation)
+                              @"iPod3,1"   :@"iPod Touch",      // (Third Generation)
+                              @"iPod4,1"   :@"iPod Touch",      // (Fourth Generation)
+                              @"iPhone1,1" :@"iPhone",          // (Original)
+                              @"iPhone1,2" :@"iPhone",          // (3G)
+                              @"iPhone2,1" :@"iPhone",          // (3GS)
+                              @"iPad1,1"   :@"iPad",            // (Original)
+                              @"iPad2,1"   :@"iPad 2",          //
+                              @"iPad3,1"   :@"iPad",            // (3rd Generation)
+                              @"iPhone3,1" :@"iPhone 4",        //
+                              @"iPhone4,1" :@"iPhone 4S",       //
+                              @"iPhone5,1" :@"iPhone 5",        // (model A1428, AT&T/Canada)
+                              @"iPhone5,2" :@"iPhone 5",        // (model A1429, everything else)
+                              @"iPad3,4"   :@"iPad",            // (4th Generation)
+                              @"iPad2,5"   :@"iPad Mini",       // (Original)
+                              @"iPhone5,3" :@"iPhone 5c",       // (model A1456, A1532 | GSM)
+                              @"iPhone5,4" :@"iPhone 5c",       // (model A1507, A1516, A1526 (China), A1529 | Global)
+                              @"iPhone6,1" :@"iPhone 5s",       // (model A1433, A1533 | GSM)
+                              @"iPhone6,2" :@"iPhone 5s",       // (model A1457, A1518, A1528 (China), A1530 | Global)
+                              @"iPad4,1"   :@"iPad Air",        // 5th Generation iPad (iPad Air) - Wifi
+                              @"iPad4,2"   :@"iPad Air",        // 5th Generation iPad (iPad Air) - Cellular
+                              @"iPad4,4"   :@"iPad Mini",       // (2nd Generation iPad Mini - Wifi)
+                              @"iPad4,5"   :@"iPad Mini"        // (2nd Generation iPad Mini - Cellular)
+                              };
     }
     
-    NSLog(@"----设备类型---%@",modelNameString);
-    return modelNameString;
+    NSString* deviceName = [deviceNamesByCode objectForKey:code];
+    
+    if (!deviceName) {
+        // Not found on database. At least guess main device type from string contents:
+        
+        if ([code rangeOfString:@"iPod"].location != NSNotFound) {
+            deviceName = @"iPod Touch";
+        }
+        else if([code rangeOfString:@"iPad"].location != NSNotFound) {
+            deviceName = @"iPad";
+        }
+        else if([code rangeOfString:@"iPhone"].location != NSNotFound){
+            deviceName = @"iPhone";
+        }
+    }
+    
+    return deviceName;
 }
 
 

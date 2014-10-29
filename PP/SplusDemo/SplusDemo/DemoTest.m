@@ -221,6 +221,7 @@
 {
     NSLog(@"uid = %@", callbackUser.uid);//返回给游戏用户uid
     NSLog(@"sessionID = %@", callbackUser.sessionID);//返回给游戏用户sessiond
+    NSLog(@"patner_Uid = %@", callbackUser.partner_uid);
     [self showMessage:@"登录成功"];
 }
 
@@ -337,10 +338,15 @@
     [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
 }
 
-//-(BOOL)shouldAutorotate
-//{
-//    return NO;
-//}
+-(BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscape;
+}
 
 - (BOOL)prefersStatusBarHidden
 {

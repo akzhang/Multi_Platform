@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <SplusIosSdk/SplusInterfaceKit.h>
 #import <AlipaySDK/AlipaySDK.h>
+#import <SplusLibrary/SplusInterfaceKit.h>
 
 @implementation AppDelegate
 
@@ -26,7 +26,6 @@
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    [[SplusInterfaceKit sharedInstance] alixPayResult:url];
 	return YES;
 }
 
@@ -34,9 +33,7 @@
 {
     
     //如果极简SDK不可用，会跳转支付宝钱包进行支付，需要将支付宝钱包的支付结果回传给SDK
-    if ([url.host isEqualToString:@"safepay"]) {
-        [[AlipaySDK defaultService] processOderWithPaymentResult:url];
-    }
+    [[SplusInterfaceKit sharedInstance] splusHandleOpenUrl:url SourceApplication:sourceApplication];
     return YES;
 }
 

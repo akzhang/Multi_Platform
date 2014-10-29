@@ -13,6 +13,8 @@
 #import "MyMD5.h"
 #import "SplusUser.h"
 #import "NSDictionary+QueryBuilder.h"
+#import "GetImage.h"
+#import "SvUDIDTools.h"
 #import <TBPlatform/TBPlatform.h>
 
 @implementation SplusInterfaceKit
@@ -89,12 +91,66 @@ __strong static SplusInterfaceKit *singleton = nil;
 /**
  *  激活接口
  */
+/**
+ *  激活接口
+ */
 -(void)activate
 {
-    Activate *active = [[Activate alloc] init];
-    active.delegate = _delegate;//设置委托
-    UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-    [rootViewController presentViewController:active animated:NO completion:nil];
+    [self activateToSplus];//激活
+}
+
+-(void)activateToSplus
+{
+    //激活信息
+    NSDictionary *dictionaryBundle = [[NSBundle mainBundle] infoDictionary];
+    NSString *partner = [dictionaryBundle objectForKey:@"Partner"];
+    NSString *sign = @"";
+    sign = [sign stringByAppendingFormat:@"%@%@%@%@%@%@%@", [AppInfo sharedSingleton].gameID, [AppInfo sharedSingleton].sourceID, [dictionaryBundle objectForKey:@"Partner"], [SvUDIDTools UDID], [SvUDIDTools UDID],[[AppInfo sharedSingleton] getData], [AppInfo sharedSingleton].gameKey];
+    
+    NSLog(@"sign = %@", sign);
+    CGFloat scale_screen = [UIScreen mainScreen].scale;
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[AppInfo sharedSingleton].gameID, @"gameid",[AppInfo      sharedSingleton].sourceID,@"referer",
+                                partner, @"partner",
+                                [SvUDIDTools UDID], @"mac",
+                                [SvUDIDTools UDID], @"imei",
+                                [NSString stringWithFormat:@"%f",SCREENWIDTH*scale_screen], @"wpixels",
+                                [NSString stringWithFormat:@"%f",SCREENHEIGHT*scale_screen], @"hpixels",
+                                [SvUDIDTools deviceName], @"mode",
+                                [[UIDevice currentDevice] systemName], @"os",
+                                [[UIDevice currentDevice] systemVersion], @"osver",
+                                [[AppInfo sharedSingleton] getData], @"time",
+                                [MyMD5 md5:sign], @"sign",
+                                [[UIDevice currentDevice] identifierForVendor], @"device",nil];
+    
+    NSString *postData = [dictionary buildQueryString];
+    httpRequest *_request = [[httpRequest alloc] init];
+    _request.dlegate = self;
+    _request.success = @selector(active_callback:);
+    _request.error = @selector(active_error_callback);
+    [_request post:API_URL_ACTIVATE argData:postData];
+}
+
+
+-(void)active_error_callback
+{
+    [self showMessage:@"网络连接超时"];
+}
+
+-(void)active_callback:(NSString*)result
+{
+    NSLog(@"result = %@", result);
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    NSDictionary *rootDic = [parser objectWithString:result];
+    NSDictionary *deviceDic = [rootDic objectForKey:@"data"];
+    NSString *deviceno = [deviceDic objectForKey:@"deviceno"];
+    NSLog(@"deviceno = %@", deviceno);
+    
+    [ActivateInfo sharedSingleton].deviceno = deviceno;
+    [ActivateInfo sharedSingleton].passport = [deviceDic objectForKey:@"passport"];
+    [ActivateInfo sharedSingleton].relationships = [deviceDic objectForKey:@"relationships"];
+
+    //激活成功，callback
+    [_delegate SplusActivateOnSuccess];
 }
 
 /**
@@ -338,8 +394,10 @@ __strong static SplusInterfaceKit *singleton = nil;
         NSDictionary *data = [rootDic objectForKey:@"data"];
         NSString *sessionID = [data objectForKey:@"sessionID"];
         NSString *userID = [data objectForKey:@"uid"];
+        NSString *partnerUid = [data objectForKey:@"partner_uid"];
         [SplusUser sharedSingleton].uid = userID;
         [SplusUser sharedSingleton].sessionID = sessionID;
+        [SplusUser sharedSingleton].partner_uid = partnerUid;
         //登录成功，callback
         [_delegate SplusLoginOnSuccess:[SplusUser sharedSingleton]];
     }
@@ -594,5 +652,33 @@ __strong static SplusInterfaceKit *singleton = nil;
 - (void)TBCheckOrderDidFailed:(NSString*)order{
 
 }
+
+
+/**
+ *  open url
+ *
+ *  @param serverid    url
+ */
+-(void)splusOpenUrl:(NSString*)url
+{
+    
+}
+
+/**
+ *  handle url
+ *
+ *  @param serverid    url
+ *  @param sourceApplication
+ */
+-(void)splusHandleOpenUrl:(NSString*)url SourceApplication:(NSString*)sourceApplication
+{
+    
+}
+
+
+
+
+
+
 
 @end

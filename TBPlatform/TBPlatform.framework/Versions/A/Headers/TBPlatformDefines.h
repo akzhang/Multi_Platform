@@ -28,7 +28,6 @@ extern NSString * const kTBLeavePlatformNotification; /* 离开平台界面时�
 extern NSString * const kTBUserLogoutNotification;    /* 用户注销通知*/
 
 #pragma mark - 枚举 ************************************************************
-
 /**
  *  悬浮工具栏位置
  */
@@ -120,29 +119,29 @@ typedef enum {
 @optional
 
 /**
- *	@brief	使用推币直接购买商品成功
+ *	使用推币直接购买商品成功
  *
  *	@param 	order 	订单号
  */
 - (void)TBBuyGoodsDidSuccessWithOrder:(NSString*)order;
 
 /**
- *	@brief	使用推币直接购买商品失败
+ *	使用推币直接购买商品失败
  *
- *	@param 	order 	订单号
+ *	@param 	order      订单号
  *	@param 	errorType  错误类型，见TB_BUYGOODS_ERROR
  */
 - (void)TBBuyGoodsDidFailedWithOrder:(NSString *)order resultCode:(TB_BUYGOODS_ERROR)errorType;
 
 /**
- *	@brief	推币余额不足，进入充值页面（开发者需要手动查询订单以获取充值购买结果）
+ *	推币余额不足，进入充值页面（开发者需要手动查询订单以获取充值购买结果）
  *
  *	@param 	order 	订单号
  */
 - (void)TBBuyGoodsDidStartRechargeWithOrder:(NSString*)order;
 
 /**
- *	@brief  跳提示框时，用户取消
+ *  跳提示框时，用户取消
  *
  *	@param	order	订单号
  */
@@ -151,7 +150,7 @@ typedef enum {
 @end
 
 /**
- @brief 手动查询充值结果回调协议
+ *  手动查询充值结果回调协议
  */
 @protocol TBCheckOrderDelegate <NSObject>
 
@@ -168,7 +167,7 @@ typedef enum {
                                amount:(int)amount
                                status:(TBCheckOrderStatusType)statusType;
 /**
- *  @brief 查询订单失败（网络不通畅，或服务器返回错误）
+ *  查询订单失败（网络不通畅，或服务器返回错误）
  */
 - (void)TBCheckOrderDidFailed:(NSString*)order;
 

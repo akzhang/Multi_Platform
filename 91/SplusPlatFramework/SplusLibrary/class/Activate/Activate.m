@@ -52,6 +52,7 @@
     sign = [sign stringByAppendingFormat:@"%@%@%@%@%@%@%@", [AppInfo sharedSingleton].gameID, [AppInfo sharedSingleton].sourceID, [dictionaryBundle objectForKey:@"Partner"],[SvUDIDTools UDID], [SvUDIDTools UDID],[[AppInfo sharedSingleton] getData], [AppInfo sharedSingleton].gameKey];
     
     NSLog(@"sign = %@", sign);
+    NSLog(@"device = %@", [SvUDIDTools deviceName]);
     CGFloat scale_screen = [UIScreen mainScreen].scale;
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[AppInfo sharedSingleton].gameID, @"gameid",[AppInfo      sharedSingleton].sourceID,@"referer",
                                 partner, @"partner",

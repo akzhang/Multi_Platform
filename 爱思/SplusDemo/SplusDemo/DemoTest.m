@@ -222,6 +222,7 @@
 {
     NSLog(@"uid = %@", callbackUser.uid);//返回给游戏用户uid
     NSLog(@"sessionID = %@", callbackUser.sessionID);//返回给游戏用户sessiond
+    NSLog(@"partner_Uid = %@", callbackUser.partner_uid);
     [self showMessage:@"登录成功"];
 }
 

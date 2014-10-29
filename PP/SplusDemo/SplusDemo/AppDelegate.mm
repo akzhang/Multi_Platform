@@ -51,9 +51,24 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    [[SplusInterfaceKit sharedInstance] splusHandleOpenUrl:url SourceApplication:sourceApplication];
+    return YES;
+}
 
-	return YES;
+
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+//    NSLog(@"urdsfssdfdsfdsfdsfsdfdsfsdfsdfsdfsdfsdf====================l:%@",[url debugDescription]);
+////    [self parse:url application:application];
+//    [[SplusInterfaceKit sharedInstance] splusOpenUrl:url];
+//	return YES;
+//}
+
+- (void)parse:(NSURL *)url application:(UIApplication *)application {
+    //结果处理
+    [[PPAppPlatformKit sharedInstance] alixPayResult:url];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
